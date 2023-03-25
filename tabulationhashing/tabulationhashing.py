@@ -1,4 +1,4 @@
-from .c_tabulationhashing import hash_x, hash_vec
+from .c_tabulationhashing import hash_x, hash_vec_full, hash_vec_batch
 import numpy as np
 
 def check_random_state(seed):
@@ -25,10 +25,14 @@ def check_random_state(seed):
 
 
 class TabulationHashing:
-    def __init__(self, input_bits, hash_bits, random_state=None, batch_len=256):
+    def __init__(self, input_bits, hash_bits, random_state=None, batch_len=0):
+        # If the table fits in the cache next with some part of the input
+        # and output vectors, use batch_len=1 (no batch) which has less
+        # conditionals
+        # But if the table does not fit in the cache, tweak batch_len > 1
         assert input_bits in (32, 64)
         assert hash_bits in (32, 64)
-        assert batch_len >= 1
+        assert batch_len >= 0
 
         self.input_dtype = np.uint32 if input_bits == 32 else np.uint64
         self.hash_dtype = np.uint32 if hash_bits == 32 else np.uint64
@@ -40,7 +44,7 @@ class TabulationHashing:
 
         # Ensure that we are going to call the correct specialized versions
         self._hash_x = hash_x[dtype_sig]
-        self._hash_vec = hash_vec[dtype_sig]
+        self._hash_vec = hash_vec_full[dtype_sig] if not batch_len else hash_vec_batch[dtype_sig]
 
         random_state = check_random_state(random_state)
 
@@ -64,9 +68,7 @@ class TabulationHashing:
             In any case, the results are returned.
             '''
         if out is None:
-            out = np.zeros_like(xvec, dtype=self.hash_dtype)
-        else:
-            out.fill(0)
+            out = np.empty_like(xvec, dtype=self.hash_dtype)
 
         # If wrong types, fail
         if xvec.dtype != self.input_dtype:
@@ -86,6 +88,9 @@ class TabulationHashing:
         if not out.flags['C_CONTIGUOUS']:
             raise Exception
 
-        self._hash_vec(xvec, self.table, out, self.batch_len)
+        if self.batch_len:
+            self._hash_vec(xvec, self.table, out, self.batch_len)
+        else:
+            self._hash_vec(xvec, self.table, out)
         return out
 

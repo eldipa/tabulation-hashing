@@ -18,11 +18,10 @@ ctypedef fused input_dtype:
     uint32_t
     uint64_t
 
-
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.infer_types(True)
-def hash_x(input_dtype x, hash_dtype[::1] table):
+cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:
     cdef:
         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7
         input_dtype x0, x1, x2, x3, x4, x5, x6, x7
@@ -33,7 +32,7 @@ def hash_x(input_dtype x, hash_dtype[::1] table):
     x3 = (x >> 24) & 0x000000ff
 
     # Note: table is assumed to be C-contiguous array of
-    # 256 x 4 hash_dtype numbers. This is declared in the
+    # 256 x (4 or 8) hash_dtype numbers. This is declared in the
     # function signature as 'hash_dtype[::1]'
     # With this, we can avoid the multiplication required
     # manage non-one strides (aka non-contiguous arrays)
@@ -59,13 +58,53 @@ def hash_x(input_dtype x, hash_dtype[::1] table):
 
     return h
 
+# Make c_hash_x callable from Python
+def hash_x(input_dtype x, hash_dtype[::1] table):
+    return c_hash_x(x, table)
 
-# Note: out must be zeroed before calling hash_vec
+
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.infer_types(True)
 @cython.cdivision(True)
-def hash_vec(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):
+def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out):
+    # Hash a vector of numbers and save the hashes into another.
+    #
+    # Call this if you know that the full table fits in the cache
+    # In general this is OK for uint32_t/uint32_t input/hash datatypes
+    #
+    # If that is the case we should expect to some misses for accessing
+    # table only once.
+    #
+    # If the table does not fully fit, there will be cache misses along
+    # the way and repeatedly. Use hash_vec_batch in that case.
+    cdef:
+        hash_dtype hi, h
+        input_dtype x, xi
+
+        uint32_t vec_size = xvec.shape[0]
+        uint32_t row, shift, rebase
+        uint32_t nrows
+
+    # Disable the GIL as this loop will not interact with the Python VM
+    with nogil:
+        for i in range(0, vec_size):
+            x = xvec[i]
+
+            # The C compiler should be smart enough to inline this call
+            # (in the Cython definition I marked it as 'inline')
+            #
+            # Note: it should not be necessary but just to make it explicit
+            # I'm telling Cython which specialization of c_hash_x I want to call
+            h = c_hash_x[input_dtype, hash_dtype](x, table)
+            out[i] = h
+
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+@cython.infer_types(True)
+@cython.cdivision(True)
+def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):
     cdef:
         hash_dtype hi
         input_dtype x, xi
@@ -91,27 +130,45 @@ def hash_vec(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, 
     # Disable the GIL as this loop will not interact with the Python VM
     with nogil:
         # Perform 2 rounds:
-        #   - the first round will process all the complete lines
+        #   - the first round will process all the complete batches
         #   - the second round will process the last incomplete batch, if any
         while (1):
             # Hash the input vector by batches.
-            # The idea is that a batch of the input vector, output vector and tables
-            # will be in the cache avoiding unnecessary memory accesses inside
-            # the inner loops.
+            # The idea is that a batch of the input vector and output vector
+            # will be fit in the cache next with at least 1 single full row
+            # of the table.
+            #
+            # The inner for-loop (see below) will compute a partial hash
+            # reusing the in-cache batch and in-cache row table per iteration
+            #
+            # On each iteration misses will occur to load the next row table
+            # but it is expected to not have any miss on the input/hash batch
+            #
             # Once the particular batch finishes, the while-loop iterates again
-            # and issue up to 6 memory accesses (1 for the input vector, 1 for the output
-            # vector and 4 for the 4-rows table) and the cycle starts again
+            # and processes the next batch
             #
             # Note: cython cannot handle range-loops with steps unknown in compile-time
             # See https://github.com/cython/cython/issues/1106
             while batch_start < last_batch_end:
+                # Process the batch with the first row (partial hash).
+                # This allows us to initialize the out vector
+                for i in range(batch_start, batch_end):
+                    x = xvec[i]
+
+                    xi = (x) & 0x000000ff
+                    hi = table[xi]
+
+                    out[i] = hi
+
                 # The C compiler should be smart enough to unroll this for loop
                 # as nrows is known in compilation type and
-                # it is quite small (4 o 8)
+                # it is quite small (4-1 o 8-1)
                 #
-                # With this for we should have in cache only 1 table row at time
-                # plus the batch of input and output vectors
-                for row in range(0, nrows):
+                # With this for-loop we are using 1 single table row at the
+                # same time per batch.
+                # If a single row fits in the cache, we will have a constant
+                # amount of misses.
+                for row in range(1, nrows):
                     shift = row * 8
                     rebase = row * 256
                     for i in range(batch_start, batch_end):
