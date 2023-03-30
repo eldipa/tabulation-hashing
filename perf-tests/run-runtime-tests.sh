@@ -17,6 +17,18 @@ perfest () {
 
 echo "RUN: $run"
 
+export CPU=2
+
+perfest 32   32   12    l       0
+perfest 32   32   16    l       0
+perfest 32   32   20    l       0
+perfest 32   32   22    l       0
+
+perfest 64   64   12    l       0
+perfest 64   64   16    l       0
+perfest 64   64   20    l       0
+perfest 64   64   22    l       0
+
 perfest 32   32   12    f       0
 perfest 32   32   16    f       0
 perfest 32   32   20    f       0
