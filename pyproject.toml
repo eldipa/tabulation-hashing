@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tabulationhashing"
-version = "1.0.1"
+version = "1.0.2"
 
 description='Implementation of Tabulation Hashing'
 
@@ -23,3 +23,6 @@ classifiers = [
 dependencies = [
     "numpy"
 ]
+
+[metadata]
+url='https://book-of-gehn.github.io/articles/2023/03/30/Tabulation-Hashing.html'
