@@ -2096,8 +2096,8 @@ static const char __pyx_k_O[] = "O";
 static const char __pyx_k_c[] = "c";
 static const char __pyx_k_h[] = "h";
 static const char __pyx_k_i[] = "i";
+static const char __pyx_k_k[] = "k";
 static const char __pyx_k_s[] = "s";
-static const char __pyx_k_x[] = "x";
 static const char __pyx_k__2[] = "|";
 static const char __pyx_k_hi[] = "hi";
 static const char __pyx_k_id[] = "id";
@@ -2110,6 +2110,7 @@ static const char __pyx_k_args[] = "args";
 static const char __pyx_k_base[] = "base";
 static const char __pyx_k_dict[] = "__dict__";
 static const char __pyx_k_kind[] = "kind";
+static const char __pyx_k_kvec[] = "kvec";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_mode[] = "mode";
 static const char __pyx_k_name[] = "name";
@@ -2119,7 +2120,6 @@ static const char __pyx_k_size[] = "size";
 static const char __pyx_k_step[] = "step";
 static const char __pyx_k_stop[] = "stop";
 static const char __pyx_k_test[] = "__test__";
-static const char __pyx_k_xvec[] = "xvec";
 static const char __pyx_k_ASCII[] = "ASCII";
 static const char __pyx_k_class[] = "__class__";
 static const char __pyx_k_dtype[] = "dtype";
@@ -2281,7 +2281,9 @@ static PyObject *__pyx_n_s_id;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_itemsize;
 static PyObject *__pyx_kp_s_itemsize_0_for_cython_array;
+static PyObject *__pyx_n_s_k;
 static PyObject *__pyx_n_s_kind;
+static PyObject *__pyx_n_s_kvec;
 static PyObject *__pyx_n_s_kwargs;
 static PyObject *__pyx_n_s_last_batch_end;
 static PyObject *__pyx_n_s_main;
@@ -2344,24 +2346,22 @@ static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
 static PyObject *__pyx_n_s_vec_size;
-static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_xi;
-static PyObject *__pyx_n_s_xvec;
 static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_hash_x(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_6hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint32_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_8hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint32_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_10hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_12hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_6hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint32_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_8hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint32_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_10hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_12hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table); /* proto */
 static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_2hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out); /* proto */
 static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_4hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len); /* proto */
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len); /* proto */
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2456,116 +2456,116 @@ static PyObject *__pyx_codeobj__36;
 /* "tabulationhashing/c_tabulationhashing.pyx":24
  * @cython.wraparound(False)
  * @cython.infer_types(True)
- * cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
+ * cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7
  */
 
-static CYTHON_INLINE uint32_t __pyx_fuse_0_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(uint32_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table) {
+static CYTHON_INLINE uint32_t __pyx_fuse_0_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(uint32_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table) {
   uint32_t __pyx_v_h;
   uint32_t __pyx_v_h0;
   uint32_t __pyx_v_h1;
   uint32_t __pyx_v_h2;
   uint32_t __pyx_v_h3;
-  uint32_t __pyx_v_x0;
-  uint32_t __pyx_v_x1;
-  uint32_t __pyx_v_x2;
-  uint32_t __pyx_v_x3;
+  uint32_t __pyx_v_k0;
+  uint32_t __pyx_v_k1;
+  uint32_t __pyx_v_k2;
+  uint32_t __pyx_v_k3;
   uint32_t __pyx_r;
   size_t __pyx_t_1;
   Py_ssize_t __pyx_t_2;
 
   /* "tabulationhashing/c_tabulationhashing.pyx":26
- * cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:
+ * cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:
  *     cdef:
  *         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7             # <<<<<<<<<<<<<<
- *         input_dtype x0, x1, x2, x3, x4, x5, x6, x7
+ *         key_dtype k0, k1, k2, k3, k4, k5, k6, k7
  * 
  */
   __pyx_v_h = 0;
 
   /* "tabulationhashing/c_tabulationhashing.pyx":29
- *         input_dtype x0, x1, x2, x3, x4, x5, x6, x7
+ *         key_dtype k0, k1, k2, k3, k4, k5, k6, k7
  * 
- *     x0 = x & 0x000000ff             # <<<<<<<<<<<<<<
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff
+ *     k0 = k & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff
  */
-  __pyx_v_x0 = (__pyx_v_x & 0x000000ff);
+  __pyx_v_k0 = (__pyx_v_k & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":30
  * 
- *     x0 = x & 0x000000ff
- *     x1 = (x >> 8) & 0x000000ff             # <<<<<<<<<<<<<<
- *     x2 = (x >> 16) & 0x000000ff
- *     x3 = (x >> 24) & 0x000000ff
+ *     k0 = k & 0x000000ff
+ *     k1 = (k >> 8) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k2 = (k >> 16) & 0x000000ff
+ *     k3 = (k >> 24) & 0x000000ff
  */
-  __pyx_v_x1 = ((__pyx_v_x >> 8) & 0x000000ff);
+  __pyx_v_k1 = ((__pyx_v_k >> 8) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":31
- *     x0 = x & 0x000000ff
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff             # <<<<<<<<<<<<<<
- *     x3 = (x >> 24) & 0x000000ff
+ *     k0 = k & 0x000000ff
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k3 = (k >> 24) & 0x000000ff
  * 
  */
-  __pyx_v_x2 = ((__pyx_v_x >> 16) & 0x000000ff);
+  __pyx_v_k2 = ((__pyx_v_k >> 16) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":32
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff
- *     x3 = (x >> 24) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff
+ *     k3 = (k >> 24) & 0x000000ff             # <<<<<<<<<<<<<<
  * 
  *     # Note: table is assumed to be C-contiguous array of
  */
-  __pyx_v_x3 = ((__pyx_v_x >> 24) & 0x000000ff);
+  __pyx_v_k3 = ((__pyx_v_k >> 24) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":39
  *     # With this, we can avoid the multiplication required
  *     # manage non-one strides (aka non-contiguous arrays)
- *     h0 = table[x0]             # <<<<<<<<<<<<<<
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]
+ *     h0 = table[k0]             # <<<<<<<<<<<<<<
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]
  */
-  __pyx_t_1 = __pyx_v_x0;
+  __pyx_t_1 = __pyx_v_k0;
   __pyx_v_h0 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":40
  *     # manage non-one strides (aka non-contiguous arrays)
- *     h0 = table[x0]
- *     h1 = table[x1 + 256]             # <<<<<<<<<<<<<<
- *     h2 = table[x2 + 256 * 2]
- *     h3 = table[x3 + 256 * 3]
+ *     h0 = table[k0]
+ *     h1 = table[k1 + 256]             # <<<<<<<<<<<<<<
+ *     h2 = table[k2 + 256 * 2]
+ *     h3 = table[k3 + 256 * 3]
  */
-  __pyx_t_2 = (__pyx_v_x1 + 0x100);
+  __pyx_t_2 = (__pyx_v_k1 + 0x100);
   __pyx_v_h1 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_2)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":41
- *     h0 = table[x0]
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]             # <<<<<<<<<<<<<<
- *     h3 = table[x3 + 256 * 3]
+ *     h0 = table[k0]
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]             # <<<<<<<<<<<<<<
+ *     h3 = table[k3 + 256 * 3]
  * 
  */
-  __pyx_t_2 = (__pyx_v_x2 + 0x200);
+  __pyx_t_2 = (__pyx_v_k2 + 0x200);
   __pyx_v_h2 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_2)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":42
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]
- *     h3 = table[x3 + 256 * 3]             # <<<<<<<<<<<<<<
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]
+ *     h3 = table[k3 + 256 * 3]             # <<<<<<<<<<<<<<
  * 
  *     h = h0 ^ h1 ^ h2 ^ h3
  */
-  __pyx_t_2 = (__pyx_v_x3 + 0x300);
+  __pyx_t_2 = (__pyx_v_k3 + 0x300);
   __pyx_v_h3 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_2)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":44
- *     h3 = table[x3 + 256 * 3]
+ *     h3 = table[k3 + 256 * 3]
  * 
  *     h = h0 ^ h1 ^ h2 ^ h3             # <<<<<<<<<<<<<<
  * 
- *     if input_dtype is uint64_t:
+ *     if key_dtype is uint64_t:
  */
   __pyx_v_h = (((__pyx_v_h0 ^ __pyx_v_h1) ^ __pyx_v_h2) ^ __pyx_v_h3);
 
@@ -2582,7 +2582,7 @@ static CYTHON_INLINE uint32_t __pyx_fuse_0_0__pyx_f_17tabulationhashing_19c_tabu
   /* "tabulationhashing/c_tabulationhashing.pyx":24
  * @cython.wraparound(False)
  * @cython.infer_types(True)
- * cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
+ * cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7
  */
@@ -2592,111 +2592,111 @@ static CYTHON_INLINE uint32_t __pyx_fuse_0_0__pyx_f_17tabulationhashing_19c_tabu
   return __pyx_r;
 }
 
-static CYTHON_INLINE uint64_t __pyx_fuse_0_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(uint32_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table) {
+static CYTHON_INLINE uint64_t __pyx_fuse_0_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(uint32_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table) {
   uint64_t __pyx_v_h;
   uint64_t __pyx_v_h0;
   uint64_t __pyx_v_h1;
   uint64_t __pyx_v_h2;
   uint64_t __pyx_v_h3;
-  uint32_t __pyx_v_x0;
-  uint32_t __pyx_v_x1;
-  uint32_t __pyx_v_x2;
-  uint32_t __pyx_v_x3;
+  uint32_t __pyx_v_k0;
+  uint32_t __pyx_v_k1;
+  uint32_t __pyx_v_k2;
+  uint32_t __pyx_v_k3;
   uint64_t __pyx_r;
   size_t __pyx_t_1;
   Py_ssize_t __pyx_t_2;
 
   /* "tabulationhashing/c_tabulationhashing.pyx":26
- * cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:
+ * cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:
  *     cdef:
  *         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7             # <<<<<<<<<<<<<<
- *         input_dtype x0, x1, x2, x3, x4, x5, x6, x7
+ *         key_dtype k0, k1, k2, k3, k4, k5, k6, k7
  * 
  */
   __pyx_v_h = 0;
 
   /* "tabulationhashing/c_tabulationhashing.pyx":29
- *         input_dtype x0, x1, x2, x3, x4, x5, x6, x7
+ *         key_dtype k0, k1, k2, k3, k4, k5, k6, k7
  * 
- *     x0 = x & 0x000000ff             # <<<<<<<<<<<<<<
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff
+ *     k0 = k & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff
  */
-  __pyx_v_x0 = (__pyx_v_x & 0x000000ff);
+  __pyx_v_k0 = (__pyx_v_k & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":30
  * 
- *     x0 = x & 0x000000ff
- *     x1 = (x >> 8) & 0x000000ff             # <<<<<<<<<<<<<<
- *     x2 = (x >> 16) & 0x000000ff
- *     x3 = (x >> 24) & 0x000000ff
+ *     k0 = k & 0x000000ff
+ *     k1 = (k >> 8) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k2 = (k >> 16) & 0x000000ff
+ *     k3 = (k >> 24) & 0x000000ff
  */
-  __pyx_v_x1 = ((__pyx_v_x >> 8) & 0x000000ff);
+  __pyx_v_k1 = ((__pyx_v_k >> 8) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":31
- *     x0 = x & 0x000000ff
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff             # <<<<<<<<<<<<<<
- *     x3 = (x >> 24) & 0x000000ff
+ *     k0 = k & 0x000000ff
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k3 = (k >> 24) & 0x000000ff
  * 
  */
-  __pyx_v_x2 = ((__pyx_v_x >> 16) & 0x000000ff);
+  __pyx_v_k2 = ((__pyx_v_k >> 16) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":32
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff
- *     x3 = (x >> 24) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff
+ *     k3 = (k >> 24) & 0x000000ff             # <<<<<<<<<<<<<<
  * 
  *     # Note: table is assumed to be C-contiguous array of
  */
-  __pyx_v_x3 = ((__pyx_v_x >> 24) & 0x000000ff);
+  __pyx_v_k3 = ((__pyx_v_k >> 24) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":39
  *     # With this, we can avoid the multiplication required
  *     # manage non-one strides (aka non-contiguous arrays)
- *     h0 = table[x0]             # <<<<<<<<<<<<<<
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]
+ *     h0 = table[k0]             # <<<<<<<<<<<<<<
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]
  */
-  __pyx_t_1 = __pyx_v_x0;
+  __pyx_t_1 = __pyx_v_k0;
   __pyx_v_h0 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":40
  *     # manage non-one strides (aka non-contiguous arrays)
- *     h0 = table[x0]
- *     h1 = table[x1 + 256]             # <<<<<<<<<<<<<<
- *     h2 = table[x2 + 256 * 2]
- *     h3 = table[x3 + 256 * 3]
+ *     h0 = table[k0]
+ *     h1 = table[k1 + 256]             # <<<<<<<<<<<<<<
+ *     h2 = table[k2 + 256 * 2]
+ *     h3 = table[k3 + 256 * 3]
  */
-  __pyx_t_2 = (__pyx_v_x1 + 0x100);
+  __pyx_t_2 = (__pyx_v_k1 + 0x100);
   __pyx_v_h1 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_2)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":41
- *     h0 = table[x0]
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]             # <<<<<<<<<<<<<<
- *     h3 = table[x3 + 256 * 3]
+ *     h0 = table[k0]
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]             # <<<<<<<<<<<<<<
+ *     h3 = table[k3 + 256 * 3]
  * 
  */
-  __pyx_t_2 = (__pyx_v_x2 + 0x200);
+  __pyx_t_2 = (__pyx_v_k2 + 0x200);
   __pyx_v_h2 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_2)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":42
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]
- *     h3 = table[x3 + 256 * 3]             # <<<<<<<<<<<<<<
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]
+ *     h3 = table[k3 + 256 * 3]             # <<<<<<<<<<<<<<
  * 
  *     h = h0 ^ h1 ^ h2 ^ h3
  */
-  __pyx_t_2 = (__pyx_v_x3 + 0x300);
+  __pyx_t_2 = (__pyx_v_k3 + 0x300);
   __pyx_v_h3 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_2)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":44
- *     h3 = table[x3 + 256 * 3]
+ *     h3 = table[k3 + 256 * 3]
  * 
  *     h = h0 ^ h1 ^ h2 ^ h3             # <<<<<<<<<<<<<<
  * 
- *     if input_dtype is uint64_t:
+ *     if key_dtype is uint64_t:
  */
   __pyx_v_h = (((__pyx_v_h0 ^ __pyx_v_h1) ^ __pyx_v_h2) ^ __pyx_v_h3);
 
@@ -2713,7 +2713,7 @@ static CYTHON_INLINE uint64_t __pyx_fuse_0_1__pyx_f_17tabulationhashing_19c_tabu
   /* "tabulationhashing/c_tabulationhashing.pyx":24
  * @cython.wraparound(False)
  * @cython.infer_types(True)
- * cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
+ * cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7
  */
@@ -2723,7 +2723,7 @@ static CYTHON_INLINE uint64_t __pyx_fuse_0_1__pyx_f_17tabulationhashing_19c_tabu
   return __pyx_r;
 }
 
-static CYTHON_INLINE uint32_t __pyx_fuse_1_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(uint64_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table) {
+static CYTHON_INLINE uint32_t __pyx_fuse_1_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(uint64_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table) {
   uint32_t __pyx_v_h;
   uint32_t __pyx_v_h0;
   uint32_t __pyx_v_h1;
@@ -2733,189 +2733,189 @@ static CYTHON_INLINE uint32_t __pyx_fuse_1_0__pyx_f_17tabulationhashing_19c_tabu
   uint32_t __pyx_v_h5;
   uint32_t __pyx_v_h6;
   uint32_t __pyx_v_h7;
-  uint64_t __pyx_v_x0;
-  uint64_t __pyx_v_x1;
-  uint64_t __pyx_v_x2;
-  uint64_t __pyx_v_x3;
-  uint64_t __pyx_v_x4;
-  uint64_t __pyx_v_x5;
-  uint64_t __pyx_v_x6;
-  uint64_t __pyx_v_x7;
+  uint64_t __pyx_v_k0;
+  uint64_t __pyx_v_k1;
+  uint64_t __pyx_v_k2;
+  uint64_t __pyx_v_k3;
+  uint64_t __pyx_v_k4;
+  uint64_t __pyx_v_k5;
+  uint64_t __pyx_v_k6;
+  uint64_t __pyx_v_k7;
   uint32_t __pyx_r;
   uint64_t __pyx_t_1;
 
   /* "tabulationhashing/c_tabulationhashing.pyx":26
- * cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:
+ * cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:
  *     cdef:
  *         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7             # <<<<<<<<<<<<<<
- *         input_dtype x0, x1, x2, x3, x4, x5, x6, x7
+ *         key_dtype k0, k1, k2, k3, k4, k5, k6, k7
  * 
  */
   __pyx_v_h = 0;
 
   /* "tabulationhashing/c_tabulationhashing.pyx":29
- *         input_dtype x0, x1, x2, x3, x4, x5, x6, x7
+ *         key_dtype k0, k1, k2, k3, k4, k5, k6, k7
  * 
- *     x0 = x & 0x000000ff             # <<<<<<<<<<<<<<
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff
+ *     k0 = k & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff
  */
-  __pyx_v_x0 = (__pyx_v_x & 0x000000ff);
+  __pyx_v_k0 = (__pyx_v_k & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":30
  * 
- *     x0 = x & 0x000000ff
- *     x1 = (x >> 8) & 0x000000ff             # <<<<<<<<<<<<<<
- *     x2 = (x >> 16) & 0x000000ff
- *     x3 = (x >> 24) & 0x000000ff
+ *     k0 = k & 0x000000ff
+ *     k1 = (k >> 8) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k2 = (k >> 16) & 0x000000ff
+ *     k3 = (k >> 24) & 0x000000ff
  */
-  __pyx_v_x1 = ((__pyx_v_x >> 8) & 0x000000ff);
+  __pyx_v_k1 = ((__pyx_v_k >> 8) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":31
- *     x0 = x & 0x000000ff
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff             # <<<<<<<<<<<<<<
- *     x3 = (x >> 24) & 0x000000ff
+ *     k0 = k & 0x000000ff
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k3 = (k >> 24) & 0x000000ff
  * 
  */
-  __pyx_v_x2 = ((__pyx_v_x >> 16) & 0x000000ff);
+  __pyx_v_k2 = ((__pyx_v_k >> 16) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":32
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff
- *     x3 = (x >> 24) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff
+ *     k3 = (k >> 24) & 0x000000ff             # <<<<<<<<<<<<<<
  * 
  *     # Note: table is assumed to be C-contiguous array of
  */
-  __pyx_v_x3 = ((__pyx_v_x >> 24) & 0x000000ff);
+  __pyx_v_k3 = ((__pyx_v_k >> 24) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":39
  *     # With this, we can avoid the multiplication required
  *     # manage non-one strides (aka non-contiguous arrays)
- *     h0 = table[x0]             # <<<<<<<<<<<<<<
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]
+ *     h0 = table[k0]             # <<<<<<<<<<<<<<
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]
  */
-  __pyx_t_1 = __pyx_v_x0;
+  __pyx_t_1 = __pyx_v_k0;
   __pyx_v_h0 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":40
  *     # manage non-one strides (aka non-contiguous arrays)
- *     h0 = table[x0]
- *     h1 = table[x1 + 256]             # <<<<<<<<<<<<<<
- *     h2 = table[x2 + 256 * 2]
- *     h3 = table[x3 + 256 * 3]
+ *     h0 = table[k0]
+ *     h1 = table[k1 + 256]             # <<<<<<<<<<<<<<
+ *     h2 = table[k2 + 256 * 2]
+ *     h3 = table[k3 + 256 * 3]
  */
-  __pyx_t_1 = (__pyx_v_x1 + 0x100);
+  __pyx_t_1 = (__pyx_v_k1 + 0x100);
   __pyx_v_h1 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":41
- *     h0 = table[x0]
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]             # <<<<<<<<<<<<<<
- *     h3 = table[x3 + 256 * 3]
+ *     h0 = table[k0]
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]             # <<<<<<<<<<<<<<
+ *     h3 = table[k3 + 256 * 3]
  * 
  */
-  __pyx_t_1 = (__pyx_v_x2 + 0x200);
+  __pyx_t_1 = (__pyx_v_k2 + 0x200);
   __pyx_v_h2 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":42
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]
- *     h3 = table[x3 + 256 * 3]             # <<<<<<<<<<<<<<
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]
+ *     h3 = table[k3 + 256 * 3]             # <<<<<<<<<<<<<<
  * 
  *     h = h0 ^ h1 ^ h2 ^ h3
  */
-  __pyx_t_1 = (__pyx_v_x3 + 0x300);
+  __pyx_t_1 = (__pyx_v_k3 + 0x300);
   __pyx_v_h3 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":44
- *     h3 = table[x3 + 256 * 3]
+ *     h3 = table[k3 + 256 * 3]
  * 
  *     h = h0 ^ h1 ^ h2 ^ h3             # <<<<<<<<<<<<<<
  * 
- *     if input_dtype is uint64_t:
+ *     if key_dtype is uint64_t:
  */
   __pyx_v_h = (((__pyx_v_h0 ^ __pyx_v_h1) ^ __pyx_v_h2) ^ __pyx_v_h3);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":47
  * 
- *     if input_dtype is uint64_t:
- *         x4 = (x >> 32) & 0x000000ff             # <<<<<<<<<<<<<<
- *         x5 = (x >> 40) & 0x000000ff
- *         x6 = (x >> 48) & 0x000000ff
+ *     if key_dtype is uint64_t:
+ *         k4 = (k >> 32) & 0x000000ff             # <<<<<<<<<<<<<<
+ *         k5 = (k >> 40) & 0x000000ff
+ *         k6 = (k >> 48) & 0x000000ff
  */
-  __pyx_v_x4 = ((__pyx_v_x >> 32) & 0x000000ff);
+  __pyx_v_k4 = ((__pyx_v_k >> 32) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":48
- *     if input_dtype is uint64_t:
- *         x4 = (x >> 32) & 0x000000ff
- *         x5 = (x >> 40) & 0x000000ff             # <<<<<<<<<<<<<<
- *         x6 = (x >> 48) & 0x000000ff
- *         x7 = (x >> 56) & 0x000000ff
+ *     if key_dtype is uint64_t:
+ *         k4 = (k >> 32) & 0x000000ff
+ *         k5 = (k >> 40) & 0x000000ff             # <<<<<<<<<<<<<<
+ *         k6 = (k >> 48) & 0x000000ff
+ *         k7 = (k >> 56) & 0x000000ff
  */
-  __pyx_v_x5 = ((__pyx_v_x >> 40) & 0x000000ff);
+  __pyx_v_k5 = ((__pyx_v_k >> 40) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":49
- *         x4 = (x >> 32) & 0x000000ff
- *         x5 = (x >> 40) & 0x000000ff
- *         x6 = (x >> 48) & 0x000000ff             # <<<<<<<<<<<<<<
- *         x7 = (x >> 56) & 0x000000ff
+ *         k4 = (k >> 32) & 0x000000ff
+ *         k5 = (k >> 40) & 0x000000ff
+ *         k6 = (k >> 48) & 0x000000ff             # <<<<<<<<<<<<<<
+ *         k7 = (k >> 56) & 0x000000ff
  * 
  */
-  __pyx_v_x6 = ((__pyx_v_x >> 48) & 0x000000ff);
+  __pyx_v_k6 = ((__pyx_v_k >> 48) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":50
- *         x5 = (x >> 40) & 0x000000ff
- *         x6 = (x >> 48) & 0x000000ff
- *         x7 = (x >> 56) & 0x000000ff             # <<<<<<<<<<<<<<
+ *         k5 = (k >> 40) & 0x000000ff
+ *         k6 = (k >> 48) & 0x000000ff
+ *         k7 = (k >> 56) & 0x000000ff             # <<<<<<<<<<<<<<
  * 
- *         h4 = table[x4 + 256 * 4]
+ *         h4 = table[k4 + 256 * 4]
  */
-  __pyx_v_x7 = ((__pyx_v_x >> 56) & 0x000000ff);
+  __pyx_v_k7 = ((__pyx_v_k >> 56) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":52
- *         x7 = (x >> 56) & 0x000000ff
+ *         k7 = (k >> 56) & 0x000000ff
  * 
- *         h4 = table[x4 + 256 * 4]             # <<<<<<<<<<<<<<
- *         h5 = table[x5 + 256 * 5]
- *         h6 = table[x6 + 256 * 6]
+ *         h4 = table[k4 + 256 * 4]             # <<<<<<<<<<<<<<
+ *         h5 = table[k5 + 256 * 5]
+ *         h6 = table[k6 + 256 * 6]
  */
-  __pyx_t_1 = (__pyx_v_x4 + 0x400);
+  __pyx_t_1 = (__pyx_v_k4 + 0x400);
   __pyx_v_h4 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":53
  * 
- *         h4 = table[x4 + 256 * 4]
- *         h5 = table[x5 + 256 * 5]             # <<<<<<<<<<<<<<
- *         h6 = table[x6 + 256 * 6]
- *         h7 = table[x7 + 256 * 7]
+ *         h4 = table[k4 + 256 * 4]
+ *         h5 = table[k5 + 256 * 5]             # <<<<<<<<<<<<<<
+ *         h6 = table[k6 + 256 * 6]
+ *         h7 = table[k7 + 256 * 7]
  */
-  __pyx_t_1 = (__pyx_v_x5 + 0x500);
+  __pyx_t_1 = (__pyx_v_k5 + 0x500);
   __pyx_v_h5 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":54
- *         h4 = table[x4 + 256 * 4]
- *         h5 = table[x5 + 256 * 5]
- *         h6 = table[x6 + 256 * 6]             # <<<<<<<<<<<<<<
- *         h7 = table[x7 + 256 * 7]
+ *         h4 = table[k4 + 256 * 4]
+ *         h5 = table[k5 + 256 * 5]
+ *         h6 = table[k6 + 256 * 6]             # <<<<<<<<<<<<<<
+ *         h7 = table[k7 + 256 * 7]
  * 
  */
-  __pyx_t_1 = (__pyx_v_x6 + 0x600);
+  __pyx_t_1 = (__pyx_v_k6 + 0x600);
   __pyx_v_h6 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":55
- *         h5 = table[x5 + 256 * 5]
- *         h6 = table[x6 + 256 * 6]
- *         h7 = table[x7 + 256 * 7]             # <<<<<<<<<<<<<<
+ *         h5 = table[k5 + 256 * 5]
+ *         h6 = table[k6 + 256 * 6]
+ *         h7 = table[k7 + 256 * 7]             # <<<<<<<<<<<<<<
  * 
  *         h ^= h4 ^ h5 ^ h6 ^ h7
  */
-  __pyx_t_1 = (__pyx_v_x7 + 0x700);
+  __pyx_t_1 = (__pyx_v_k7 + 0x700);
   __pyx_v_h7 = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":57
- *         h7 = table[x7 + 256 * 7]
+ *         h7 = table[k7 + 256 * 7]
  * 
  *         h ^= h4 ^ h5 ^ h6 ^ h7             # <<<<<<<<<<<<<<
  * 
@@ -2936,7 +2936,7 @@ static CYTHON_INLINE uint32_t __pyx_fuse_1_0__pyx_f_17tabulationhashing_19c_tabu
   /* "tabulationhashing/c_tabulationhashing.pyx":24
  * @cython.wraparound(False)
  * @cython.infer_types(True)
- * cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
+ * cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7
  */
@@ -2946,7 +2946,7 @@ static CYTHON_INLINE uint32_t __pyx_fuse_1_0__pyx_f_17tabulationhashing_19c_tabu
   return __pyx_r;
 }
 
-static CYTHON_INLINE uint64_t __pyx_fuse_1_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(uint64_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table) {
+static CYTHON_INLINE uint64_t __pyx_fuse_1_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(uint64_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table) {
   uint64_t __pyx_v_h;
   uint64_t __pyx_v_h0;
   uint64_t __pyx_v_h1;
@@ -2956,189 +2956,189 @@ static CYTHON_INLINE uint64_t __pyx_fuse_1_1__pyx_f_17tabulationhashing_19c_tabu
   uint64_t __pyx_v_h5;
   uint64_t __pyx_v_h6;
   uint64_t __pyx_v_h7;
-  uint64_t __pyx_v_x0;
-  uint64_t __pyx_v_x1;
-  uint64_t __pyx_v_x2;
-  uint64_t __pyx_v_x3;
-  uint64_t __pyx_v_x4;
-  uint64_t __pyx_v_x5;
-  uint64_t __pyx_v_x6;
-  uint64_t __pyx_v_x7;
+  uint64_t __pyx_v_k0;
+  uint64_t __pyx_v_k1;
+  uint64_t __pyx_v_k2;
+  uint64_t __pyx_v_k3;
+  uint64_t __pyx_v_k4;
+  uint64_t __pyx_v_k5;
+  uint64_t __pyx_v_k6;
+  uint64_t __pyx_v_k7;
   uint64_t __pyx_r;
   uint64_t __pyx_t_1;
 
   /* "tabulationhashing/c_tabulationhashing.pyx":26
- * cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:
+ * cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:
  *     cdef:
  *         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7             # <<<<<<<<<<<<<<
- *         input_dtype x0, x1, x2, x3, x4, x5, x6, x7
+ *         key_dtype k0, k1, k2, k3, k4, k5, k6, k7
  * 
  */
   __pyx_v_h = 0;
 
   /* "tabulationhashing/c_tabulationhashing.pyx":29
- *         input_dtype x0, x1, x2, x3, x4, x5, x6, x7
+ *         key_dtype k0, k1, k2, k3, k4, k5, k6, k7
  * 
- *     x0 = x & 0x000000ff             # <<<<<<<<<<<<<<
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff
+ *     k0 = k & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff
  */
-  __pyx_v_x0 = (__pyx_v_x & 0x000000ff);
+  __pyx_v_k0 = (__pyx_v_k & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":30
  * 
- *     x0 = x & 0x000000ff
- *     x1 = (x >> 8) & 0x000000ff             # <<<<<<<<<<<<<<
- *     x2 = (x >> 16) & 0x000000ff
- *     x3 = (x >> 24) & 0x000000ff
+ *     k0 = k & 0x000000ff
+ *     k1 = (k >> 8) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k2 = (k >> 16) & 0x000000ff
+ *     k3 = (k >> 24) & 0x000000ff
  */
-  __pyx_v_x1 = ((__pyx_v_x >> 8) & 0x000000ff);
+  __pyx_v_k1 = ((__pyx_v_k >> 8) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":31
- *     x0 = x & 0x000000ff
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff             # <<<<<<<<<<<<<<
- *     x3 = (x >> 24) & 0x000000ff
+ *     k0 = k & 0x000000ff
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k3 = (k >> 24) & 0x000000ff
  * 
  */
-  __pyx_v_x2 = ((__pyx_v_x >> 16) & 0x000000ff);
+  __pyx_v_k2 = ((__pyx_v_k >> 16) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":32
- *     x1 = (x >> 8) & 0x000000ff
- *     x2 = (x >> 16) & 0x000000ff
- *     x3 = (x >> 24) & 0x000000ff             # <<<<<<<<<<<<<<
+ *     k1 = (k >> 8) & 0x000000ff
+ *     k2 = (k >> 16) & 0x000000ff
+ *     k3 = (k >> 24) & 0x000000ff             # <<<<<<<<<<<<<<
  * 
  *     # Note: table is assumed to be C-contiguous array of
  */
-  __pyx_v_x3 = ((__pyx_v_x >> 24) & 0x000000ff);
+  __pyx_v_k3 = ((__pyx_v_k >> 24) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":39
  *     # With this, we can avoid the multiplication required
  *     # manage non-one strides (aka non-contiguous arrays)
- *     h0 = table[x0]             # <<<<<<<<<<<<<<
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]
+ *     h0 = table[k0]             # <<<<<<<<<<<<<<
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]
  */
-  __pyx_t_1 = __pyx_v_x0;
+  __pyx_t_1 = __pyx_v_k0;
   __pyx_v_h0 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":40
  *     # manage non-one strides (aka non-contiguous arrays)
- *     h0 = table[x0]
- *     h1 = table[x1 + 256]             # <<<<<<<<<<<<<<
- *     h2 = table[x2 + 256 * 2]
- *     h3 = table[x3 + 256 * 3]
+ *     h0 = table[k0]
+ *     h1 = table[k1 + 256]             # <<<<<<<<<<<<<<
+ *     h2 = table[k2 + 256 * 2]
+ *     h3 = table[k3 + 256 * 3]
  */
-  __pyx_t_1 = (__pyx_v_x1 + 0x100);
+  __pyx_t_1 = (__pyx_v_k1 + 0x100);
   __pyx_v_h1 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":41
- *     h0 = table[x0]
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]             # <<<<<<<<<<<<<<
- *     h3 = table[x3 + 256 * 3]
+ *     h0 = table[k0]
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]             # <<<<<<<<<<<<<<
+ *     h3 = table[k3 + 256 * 3]
  * 
  */
-  __pyx_t_1 = (__pyx_v_x2 + 0x200);
+  __pyx_t_1 = (__pyx_v_k2 + 0x200);
   __pyx_v_h2 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":42
- *     h1 = table[x1 + 256]
- *     h2 = table[x2 + 256 * 2]
- *     h3 = table[x3 + 256 * 3]             # <<<<<<<<<<<<<<
+ *     h1 = table[k1 + 256]
+ *     h2 = table[k2 + 256 * 2]
+ *     h3 = table[k3 + 256 * 3]             # <<<<<<<<<<<<<<
  * 
  *     h = h0 ^ h1 ^ h2 ^ h3
  */
-  __pyx_t_1 = (__pyx_v_x3 + 0x300);
+  __pyx_t_1 = (__pyx_v_k3 + 0x300);
   __pyx_v_h3 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":44
- *     h3 = table[x3 + 256 * 3]
+ *     h3 = table[k3 + 256 * 3]
  * 
  *     h = h0 ^ h1 ^ h2 ^ h3             # <<<<<<<<<<<<<<
  * 
- *     if input_dtype is uint64_t:
+ *     if key_dtype is uint64_t:
  */
   __pyx_v_h = (((__pyx_v_h0 ^ __pyx_v_h1) ^ __pyx_v_h2) ^ __pyx_v_h3);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":47
  * 
- *     if input_dtype is uint64_t:
- *         x4 = (x >> 32) & 0x000000ff             # <<<<<<<<<<<<<<
- *         x5 = (x >> 40) & 0x000000ff
- *         x6 = (x >> 48) & 0x000000ff
+ *     if key_dtype is uint64_t:
+ *         k4 = (k >> 32) & 0x000000ff             # <<<<<<<<<<<<<<
+ *         k5 = (k >> 40) & 0x000000ff
+ *         k6 = (k >> 48) & 0x000000ff
  */
-  __pyx_v_x4 = ((__pyx_v_x >> 32) & 0x000000ff);
+  __pyx_v_k4 = ((__pyx_v_k >> 32) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":48
- *     if input_dtype is uint64_t:
- *         x4 = (x >> 32) & 0x000000ff
- *         x5 = (x >> 40) & 0x000000ff             # <<<<<<<<<<<<<<
- *         x6 = (x >> 48) & 0x000000ff
- *         x7 = (x >> 56) & 0x000000ff
+ *     if key_dtype is uint64_t:
+ *         k4 = (k >> 32) & 0x000000ff
+ *         k5 = (k >> 40) & 0x000000ff             # <<<<<<<<<<<<<<
+ *         k6 = (k >> 48) & 0x000000ff
+ *         k7 = (k >> 56) & 0x000000ff
  */
-  __pyx_v_x5 = ((__pyx_v_x >> 40) & 0x000000ff);
+  __pyx_v_k5 = ((__pyx_v_k >> 40) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":49
- *         x4 = (x >> 32) & 0x000000ff
- *         x5 = (x >> 40) & 0x000000ff
- *         x6 = (x >> 48) & 0x000000ff             # <<<<<<<<<<<<<<
- *         x7 = (x >> 56) & 0x000000ff
+ *         k4 = (k >> 32) & 0x000000ff
+ *         k5 = (k >> 40) & 0x000000ff
+ *         k6 = (k >> 48) & 0x000000ff             # <<<<<<<<<<<<<<
+ *         k7 = (k >> 56) & 0x000000ff
  * 
  */
-  __pyx_v_x6 = ((__pyx_v_x >> 48) & 0x000000ff);
+  __pyx_v_k6 = ((__pyx_v_k >> 48) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":50
- *         x5 = (x >> 40) & 0x000000ff
- *         x6 = (x >> 48) & 0x000000ff
- *         x7 = (x >> 56) & 0x000000ff             # <<<<<<<<<<<<<<
+ *         k5 = (k >> 40) & 0x000000ff
+ *         k6 = (k >> 48) & 0x000000ff
+ *         k7 = (k >> 56) & 0x000000ff             # <<<<<<<<<<<<<<
  * 
- *         h4 = table[x4 + 256 * 4]
+ *         h4 = table[k4 + 256 * 4]
  */
-  __pyx_v_x7 = ((__pyx_v_x >> 56) & 0x000000ff);
+  __pyx_v_k7 = ((__pyx_v_k >> 56) & 0x000000ff);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":52
- *         x7 = (x >> 56) & 0x000000ff
+ *         k7 = (k >> 56) & 0x000000ff
  * 
- *         h4 = table[x4 + 256 * 4]             # <<<<<<<<<<<<<<
- *         h5 = table[x5 + 256 * 5]
- *         h6 = table[x6 + 256 * 6]
+ *         h4 = table[k4 + 256 * 4]             # <<<<<<<<<<<<<<
+ *         h5 = table[k5 + 256 * 5]
+ *         h6 = table[k6 + 256 * 6]
  */
-  __pyx_t_1 = (__pyx_v_x4 + 0x400);
+  __pyx_t_1 = (__pyx_v_k4 + 0x400);
   __pyx_v_h4 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":53
  * 
- *         h4 = table[x4 + 256 * 4]
- *         h5 = table[x5 + 256 * 5]             # <<<<<<<<<<<<<<
- *         h6 = table[x6 + 256 * 6]
- *         h7 = table[x7 + 256 * 7]
+ *         h4 = table[k4 + 256 * 4]
+ *         h5 = table[k5 + 256 * 5]             # <<<<<<<<<<<<<<
+ *         h6 = table[k6 + 256 * 6]
+ *         h7 = table[k7 + 256 * 7]
  */
-  __pyx_t_1 = (__pyx_v_x5 + 0x500);
+  __pyx_t_1 = (__pyx_v_k5 + 0x500);
   __pyx_v_h5 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":54
- *         h4 = table[x4 + 256 * 4]
- *         h5 = table[x5 + 256 * 5]
- *         h6 = table[x6 + 256 * 6]             # <<<<<<<<<<<<<<
- *         h7 = table[x7 + 256 * 7]
+ *         h4 = table[k4 + 256 * 4]
+ *         h5 = table[k5 + 256 * 5]
+ *         h6 = table[k6 + 256 * 6]             # <<<<<<<<<<<<<<
+ *         h7 = table[k7 + 256 * 7]
  * 
  */
-  __pyx_t_1 = (__pyx_v_x6 + 0x600);
+  __pyx_t_1 = (__pyx_v_k6 + 0x600);
   __pyx_v_h6 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":55
- *         h5 = table[x5 + 256 * 5]
- *         h6 = table[x6 + 256 * 6]
- *         h7 = table[x7 + 256 * 7]             # <<<<<<<<<<<<<<
+ *         h5 = table[k5 + 256 * 5]
+ *         h6 = table[k6 + 256 * 6]
+ *         h7 = table[k7 + 256 * 7]             # <<<<<<<<<<<<<<
  * 
  *         h ^= h4 ^ h5 ^ h6 ^ h7
  */
-  __pyx_t_1 = (__pyx_v_x7 + 0x700);
+  __pyx_t_1 = (__pyx_v_k7 + 0x700);
   __pyx_v_h7 = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_table.data) + __pyx_t_1)) )));
 
   /* "tabulationhashing/c_tabulationhashing.pyx":57
- *         h7 = table[x7 + 256 * 7]
+ *         h7 = table[k7 + 256 * 7]
  * 
  *         h ^= h4 ^ h5 ^ h6 ^ h7             # <<<<<<<<<<<<<<
  * 
@@ -3159,7 +3159,7 @@ static CYTHON_INLINE uint64_t __pyx_fuse_1_1__pyx_f_17tabulationhashing_19c_tabu
   /* "tabulationhashing/c_tabulationhashing.pyx":24
  * @cython.wraparound(False)
  * @cython.infer_types(True)
- * cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
+ * cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7
  */
@@ -3172,8 +3172,8 @@ static CYTHON_INLINE uint64_t __pyx_fuse_1_1__pyx_f_17tabulationhashing_19c_tabu
 /* "tabulationhashing/c_tabulationhashing.pyx":62
  * 
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
- *     return c_hash_x(x, table)
+ * def hash_x(key_dtype k, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
+ *     return c_hash_x(k, table)
  * 
  */
 
@@ -3368,7 +3368,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_hash_x(CYTHO
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
     __PYX_ERR(0, 62, __pyx_L1_error)
   }
-  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_x, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_k, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 62, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_4 != 0);
   __pyx_t_2 = __pyx_t_3;
   __pyx_L7_bool_binop_done:;
@@ -3377,7 +3377,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_hash_x(CYTHO
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(0, 62, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_k); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_arg = __pyx_t_1;
     __pyx_t_1 = 0;
@@ -3828,7 +3828,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_hash_x(CYTHO
 static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_7hash_x(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_0_0__pyx_mdef_17tabulationhashing_19c_tabulationhashing_7hash_x = {"__pyx_fuse_0_0hash_x", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_7hash_x, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_7hash_x(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  uint32_t __pyx_v_x;
+  uint32_t __pyx_v_k;
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -3837,7 +3837,7 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_x (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_x,&__pyx_n_s_table,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_k,&__pyx_n_s_table,0};
     PyObject* values[2] = {0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -3853,7 +3853,7 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_x)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_k)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -3871,7 +3871,7 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_x = __Pyx_PyInt_As_uint32_t(values[0]); if (unlikely((__pyx_v_x == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 62, __pyx_L3_error)
+    __pyx_v_k = __Pyx_PyInt_As_uint32_t(values[0]); if (unlikely((__pyx_v_k == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 62, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 62, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
@@ -3882,14 +3882,14 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_6hash_x(__pyx_self, __pyx_v_x, __pyx_v_table);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_6hash_x(__pyx_self, __pyx_v_k, __pyx_v_table);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_6hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint32_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_6hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint32_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3900,13 +3900,13 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_6hash_x(CYTH
 
   /* "tabulationhashing/c_tabulationhashing.pyx":63
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):
- *     return c_hash_x(x, table)             # <<<<<<<<<<<<<<
+ * def hash_x(key_dtype k, hash_dtype[::1] table):
+ *     return c_hash_x(k, table)             # <<<<<<<<<<<<<<
  * 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_uint32_t(__pyx_fuse_0_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_x, __pyx_v_table)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_uint32_t(__pyx_fuse_0_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_k, __pyx_v_table)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3915,8 +3915,8 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_6hash_x(CYTH
   /* "tabulationhashing/c_tabulationhashing.pyx":62
  * 
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
- *     return c_hash_x(x, table)
+ * def hash_x(key_dtype k, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
+ *     return c_hash_x(k, table)
  * 
  */
 
@@ -3936,7 +3936,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_6hash_x(CYTH
 static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_9hash_x(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_0_1__pyx_mdef_17tabulationhashing_19c_tabulationhashing_9hash_x = {"__pyx_fuse_0_1hash_x", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_9hash_x, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_9hash_x(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  uint32_t __pyx_v_x;
+  uint32_t __pyx_v_k;
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -3945,7 +3945,7 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_x (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_x,&__pyx_n_s_table,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_k,&__pyx_n_s_table,0};
     PyObject* values[2] = {0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -3961,7 +3961,7 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_x)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_k)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -3979,7 +3979,7 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_x = __Pyx_PyInt_As_uint32_t(values[0]); if (unlikely((__pyx_v_x == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 62, __pyx_L3_error)
+    __pyx_v_k = __Pyx_PyInt_As_uint32_t(values[0]); if (unlikely((__pyx_v_k == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 62, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 62, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
@@ -3990,14 +3990,14 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_8hash_x(__pyx_self, __pyx_v_x, __pyx_v_table);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_8hash_x(__pyx_self, __pyx_v_k, __pyx_v_table);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_8hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint32_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_8hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint32_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4008,13 +4008,13 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_8hash_x(CYTH
 
   /* "tabulationhashing/c_tabulationhashing.pyx":63
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):
- *     return c_hash_x(x, table)             # <<<<<<<<<<<<<<
+ * def hash_x(key_dtype k, hash_dtype[::1] table):
+ *     return c_hash_x(k, table)             # <<<<<<<<<<<<<<
  * 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_uint64_t(__pyx_fuse_0_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_x, __pyx_v_table)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_uint64_t(__pyx_fuse_0_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_k, __pyx_v_table)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4023,8 +4023,8 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_8hash_x(CYTH
   /* "tabulationhashing/c_tabulationhashing.pyx":62
  * 
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
- *     return c_hash_x(x, table)
+ * def hash_x(key_dtype k, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
+ *     return c_hash_x(k, table)
  * 
  */
 
@@ -4044,7 +4044,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_8hash_x(CYTH
 static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_11hash_x(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_1_0__pyx_mdef_17tabulationhashing_19c_tabulationhashing_11hash_x = {"__pyx_fuse_1_0hash_x", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_11hash_x, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_11hash_x(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  uint64_t __pyx_v_x;
+  uint64_t __pyx_v_k;
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -4053,7 +4053,7 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_x (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_x,&__pyx_n_s_table,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_k,&__pyx_n_s_table,0};
     PyObject* values[2] = {0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -4069,7 +4069,7 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_x)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_k)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -4087,7 +4087,7 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_x = __Pyx_PyInt_As_uint64_t(values[0]); if (unlikely((__pyx_v_x == ((uint64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 62, __pyx_L3_error)
+    __pyx_v_k = __Pyx_PyInt_As_uint64_t(values[0]); if (unlikely((__pyx_v_k == ((uint64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 62, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 62, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
@@ -4098,14 +4098,14 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_10hash_x(__pyx_self, __pyx_v_x, __pyx_v_table);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_10hash_x(__pyx_self, __pyx_v_k, __pyx_v_table);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_10hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_10hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4116,13 +4116,13 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_10hash_x(CYT
 
   /* "tabulationhashing/c_tabulationhashing.pyx":63
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):
- *     return c_hash_x(x, table)             # <<<<<<<<<<<<<<
+ * def hash_x(key_dtype k, hash_dtype[::1] table):
+ *     return c_hash_x(k, table)             # <<<<<<<<<<<<<<
  * 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_uint32_t(__pyx_fuse_1_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_x, __pyx_v_table)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_uint32_t(__pyx_fuse_1_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_k, __pyx_v_table)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4131,8 +4131,8 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_10hash_x(CYT
   /* "tabulationhashing/c_tabulationhashing.pyx":62
  * 
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
- *     return c_hash_x(x, table)
+ * def hash_x(key_dtype k, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
+ *     return c_hash_x(k, table)
  * 
  */
 
@@ -4152,7 +4152,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_10hash_x(CYT
 static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_13hash_x(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_1_1__pyx_mdef_17tabulationhashing_19c_tabulationhashing_13hash_x = {"__pyx_fuse_1_1hash_x", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_13hash_x, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_13hash_x(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  uint64_t __pyx_v_x;
+  uint64_t __pyx_v_k;
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -4161,7 +4161,7 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_x (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_x,&__pyx_n_s_table,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_k,&__pyx_n_s_table,0};
     PyObject* values[2] = {0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -4177,7 +4177,7 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_x)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_k)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -4195,7 +4195,7 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_x = __Pyx_PyInt_As_uint64_t(values[0]); if (unlikely((__pyx_v_x == ((uint64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 62, __pyx_L3_error)
+    __pyx_v_k = __Pyx_PyInt_As_uint64_t(values[0]); if (unlikely((__pyx_v_k == ((uint64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 62, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 62, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
@@ -4206,14 +4206,14 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_12hash_x(__pyx_self, __pyx_v_x, __pyx_v_table);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_12hash_x(__pyx_self, __pyx_v_k, __pyx_v_table);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_12hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_x, __Pyx_memviewslice __pyx_v_table) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_12hash_x(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_k, __Pyx_memviewslice __pyx_v_table) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4224,13 +4224,13 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_12hash_x(CYT
 
   /* "tabulationhashing/c_tabulationhashing.pyx":63
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):
- *     return c_hash_x(x, table)             # <<<<<<<<<<<<<<
+ * def hash_x(key_dtype k, hash_dtype[::1] table):
+ *     return c_hash_x(k, table)             # <<<<<<<<<<<<<<
  * 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_uint64_t(__pyx_fuse_1_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_x, __pyx_v_table)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_uint64_t(__pyx_fuse_1_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_k, __pyx_v_table)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4239,8 +4239,8 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_12hash_x(CYT
   /* "tabulationhashing/c_tabulationhashing.pyx":62
  * 
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
- *     return c_hash_x(x, table)
+ * def hash_x(key_dtype k, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
+ *     return c_hash_x(k, table)
  * 
  */
 
@@ -4259,7 +4259,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_12hash_x(CYT
 /* "tabulationhashing/c_tabulationhashing.pyx":70
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
+ * def hash_vec_full(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
  *     # Hash a vector of numbers and save the hashes into another.
  *     #
  */
@@ -4455,7 +4455,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_2hash_vec_fu
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
     __PYX_ERR(0, 70, __pyx_L1_error)
   }
-  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_xvec, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_kvec, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 70, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_4 != 0);
   __pyx_t_2 = __pyx_t_3;
   __pyx_L7_bool_binop_done:;
@@ -4464,7 +4464,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_2hash_vec_fu
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(0, 70, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_xvec); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_kvec); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_arg = __pyx_t_1;
     __pyx_t_1 = 0;
@@ -5055,7 +5055,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_2hash_vec_fu
 static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_17hash_vec_full(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_0_0__pyx_mdef_17tabulationhashing_19c_tabulationhashing_17hash_vec_full = {"__pyx_fuse_0_0hash_vec_full", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_17hash_vec_full, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_17hash_vec_full(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  __Pyx_memviewslice __pyx_v_xvec = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_kvec = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_out = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
@@ -5065,7 +5065,7 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_vec_full (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_xvec,&__pyx_n_s_table,&__pyx_n_s_out,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_kvec,&__pyx_n_s_table,&__pyx_n_s_out,0};
     PyObject* values[3] = {0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -5083,7 +5083,7 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xvec)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kvec)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -5108,7 +5108,7 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_xvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_xvec.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
+    __pyx_v_kvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_kvec.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
     __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
   }
@@ -5120,16 +5120,16 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_full(__pyx_self, __pyx_v_xvec, __pyx_v_table, __pyx_v_out);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_full(__pyx_self, __pyx_v_kvec, __pyx_v_table, __pyx_v_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out) {
   uint32_t __pyx_v_h;
-  uint32_t __pyx_v_x;
+  uint32_t __pyx_v_k;
   uint32_t __pyx_v_vec_size;
   long __pyx_v_i;
   PyObject *__pyx_r = NULL;
@@ -5141,20 +5141,20 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_f
   __Pyx_RefNannySetupContext("__pyx_fuse_0_0hash_vec_full", 0);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":85
- *         input_dtype x, xi
+ *         key_dtype k, xi
  * 
- *         uint32_t vec_size = xvec.shape[0]             # <<<<<<<<<<<<<<
+ *         uint32_t vec_size = kvec.shape[0]             # <<<<<<<<<<<<<<
  *         uint32_t row, shift, rebase
  *         uint32_t nrows
  */
-  __pyx_v_vec_size = (__pyx_v_xvec.shape[0]);
+  __pyx_v_vec_size = (__pyx_v_kvec.shape[0]);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":90
  * 
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:             # <<<<<<<<<<<<<<
  *         for i in range(0, vec_size):
- *             x = xvec[i]
+ *             k = kvec[i]
  */
   {
       #ifdef WITH_THREAD
@@ -5168,7 +5168,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_f
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:
  *         for i in range(0, vec_size):             # <<<<<<<<<<<<<<
- *             x = xvec[i]
+ *             k = kvec[i]
  * 
  */
         __pyx_t_1 = __pyx_v_vec_size;
@@ -5179,25 +5179,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_f
           /* "tabulationhashing/c_tabulationhashing.pyx":92
  *     with nogil:
  *         for i in range(0, vec_size):
- *             x = xvec[i]             # <<<<<<<<<<<<<<
+ *             k = kvec[i]             # <<<<<<<<<<<<<<
  * 
  *             # The C compiler should be smart enough to inline this call
  */
           __pyx_t_4 = __pyx_v_i;
-          __pyx_v_x = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_xvec.data) + __pyx_t_4)) )));
+          __pyx_v_k = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_kvec.data) + __pyx_t_4)) )));
 
           /* "tabulationhashing/c_tabulationhashing.pyx":99
  *             # Note: it should not be necessary but just to make it explicit
  *             # I'm telling Cython which specialization of c_hash_x I want to call
- *             h = c_hash_x[input_dtype, hash_dtype](x, table)             # <<<<<<<<<<<<<<
+ *             h = c_hash_x[key_dtype, hash_dtype](k, table)             # <<<<<<<<<<<<<<
  *             out[i] = h
  * 
  */
-          __pyx_v_h = __pyx_fuse_0_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_x, __pyx_v_table);
+          __pyx_v_h = __pyx_fuse_0_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_k, __pyx_v_table);
 
           /* "tabulationhashing/c_tabulationhashing.pyx":100
  *             # I'm telling Cython which specialization of c_hash_x I want to call
- *             h = c_hash_x[input_dtype, hash_dtype](x, table)
+ *             h = c_hash_x[key_dtype, hash_dtype](k, table)
  *             out[i] = h             # <<<<<<<<<<<<<<
  * 
  * 
@@ -5212,7 +5212,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_f
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:             # <<<<<<<<<<<<<<
  *         for i in range(0, vec_size):
- *             x = xvec[i]
+ *             k = kvec[i]
  */
       /*finally:*/ {
         /*normal exit:*/{
@@ -5229,14 +5229,14 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_f
   /* "tabulationhashing/c_tabulationhashing.pyx":70
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
+ * def hash_vec_full(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
  *     # Hash a vector of numbers and save the hashes into another.
  *     #
  */
 
   /* function exit code */
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_xvec, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_kvec, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_table, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __Pyx_XGIVEREF(__pyx_r);
@@ -5248,7 +5248,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_16hash_vec_f
 static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_19hash_vec_full(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_0_1__pyx_mdef_17tabulationhashing_19c_tabulationhashing_19hash_vec_full = {"__pyx_fuse_0_1hash_vec_full", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_19hash_vec_full, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_19hash_vec_full(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  __Pyx_memviewslice __pyx_v_xvec = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_kvec = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_out = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
@@ -5258,7 +5258,7 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_vec_full (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_xvec,&__pyx_n_s_table,&__pyx_n_s_out,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_kvec,&__pyx_n_s_table,&__pyx_n_s_out,0};
     PyObject* values[3] = {0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -5276,7 +5276,7 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xvec)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kvec)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -5301,7 +5301,7 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_xvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_xvec.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
+    __pyx_v_kvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_kvec.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
     __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
   }
@@ -5313,16 +5313,16 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_full(__pyx_self, __pyx_v_xvec, __pyx_v_table, __pyx_v_out);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_full(__pyx_self, __pyx_v_kvec, __pyx_v_table, __pyx_v_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out) {
   uint64_t __pyx_v_h;
-  uint32_t __pyx_v_x;
+  uint32_t __pyx_v_k;
   uint32_t __pyx_v_vec_size;
   long __pyx_v_i;
   PyObject *__pyx_r = NULL;
@@ -5334,20 +5334,20 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_f
   __Pyx_RefNannySetupContext("__pyx_fuse_0_1hash_vec_full", 0);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":85
- *         input_dtype x, xi
+ *         key_dtype k, xi
  * 
- *         uint32_t vec_size = xvec.shape[0]             # <<<<<<<<<<<<<<
+ *         uint32_t vec_size = kvec.shape[0]             # <<<<<<<<<<<<<<
  *         uint32_t row, shift, rebase
  *         uint32_t nrows
  */
-  __pyx_v_vec_size = (__pyx_v_xvec.shape[0]);
+  __pyx_v_vec_size = (__pyx_v_kvec.shape[0]);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":90
  * 
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:             # <<<<<<<<<<<<<<
  *         for i in range(0, vec_size):
- *             x = xvec[i]
+ *             k = kvec[i]
  */
   {
       #ifdef WITH_THREAD
@@ -5361,7 +5361,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_f
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:
  *         for i in range(0, vec_size):             # <<<<<<<<<<<<<<
- *             x = xvec[i]
+ *             k = kvec[i]
  * 
  */
         __pyx_t_1 = __pyx_v_vec_size;
@@ -5372,25 +5372,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_f
           /* "tabulationhashing/c_tabulationhashing.pyx":92
  *     with nogil:
  *         for i in range(0, vec_size):
- *             x = xvec[i]             # <<<<<<<<<<<<<<
+ *             k = kvec[i]             # <<<<<<<<<<<<<<
  * 
  *             # The C compiler should be smart enough to inline this call
  */
           __pyx_t_4 = __pyx_v_i;
-          __pyx_v_x = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_xvec.data) + __pyx_t_4)) )));
+          __pyx_v_k = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_kvec.data) + __pyx_t_4)) )));
 
           /* "tabulationhashing/c_tabulationhashing.pyx":99
  *             # Note: it should not be necessary but just to make it explicit
  *             # I'm telling Cython which specialization of c_hash_x I want to call
- *             h = c_hash_x[input_dtype, hash_dtype](x, table)             # <<<<<<<<<<<<<<
+ *             h = c_hash_x[key_dtype, hash_dtype](k, table)             # <<<<<<<<<<<<<<
  *             out[i] = h
  * 
  */
-          __pyx_v_h = __pyx_fuse_0_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_x, __pyx_v_table);
+          __pyx_v_h = __pyx_fuse_0_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_k, __pyx_v_table);
 
           /* "tabulationhashing/c_tabulationhashing.pyx":100
  *             # I'm telling Cython which specialization of c_hash_x I want to call
- *             h = c_hash_x[input_dtype, hash_dtype](x, table)
+ *             h = c_hash_x[key_dtype, hash_dtype](k, table)
  *             out[i] = h             # <<<<<<<<<<<<<<
  * 
  * 
@@ -5405,7 +5405,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_f
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:             # <<<<<<<<<<<<<<
  *         for i in range(0, vec_size):
- *             x = xvec[i]
+ *             k = kvec[i]
  */
       /*finally:*/ {
         /*normal exit:*/{
@@ -5422,14 +5422,14 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_f
   /* "tabulationhashing/c_tabulationhashing.pyx":70
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
+ * def hash_vec_full(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
  *     # Hash a vector of numbers and save the hashes into another.
  *     #
  */
 
   /* function exit code */
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_xvec, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_kvec, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_table, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __Pyx_XGIVEREF(__pyx_r);
@@ -5441,7 +5441,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_18hash_vec_f
 static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_21hash_vec_full(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_1_0__pyx_mdef_17tabulationhashing_19c_tabulationhashing_21hash_vec_full = {"__pyx_fuse_1_0hash_vec_full", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_21hash_vec_full, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_21hash_vec_full(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  __Pyx_memviewslice __pyx_v_xvec = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_kvec = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_out = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
@@ -5451,7 +5451,7 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_vec_full (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_xvec,&__pyx_n_s_table,&__pyx_n_s_out,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_kvec,&__pyx_n_s_table,&__pyx_n_s_out,0};
     PyObject* values[3] = {0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -5469,7 +5469,7 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xvec)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kvec)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -5494,7 +5494,7 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_xvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_xvec.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
+    __pyx_v_kvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_kvec.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
     __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
   }
@@ -5506,16 +5506,16 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_full(__pyx_self, __pyx_v_xvec, __pyx_v_table, __pyx_v_out);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_full(__pyx_self, __pyx_v_kvec, __pyx_v_table, __pyx_v_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out) {
   uint32_t __pyx_v_h;
-  uint64_t __pyx_v_x;
+  uint64_t __pyx_v_k;
   uint32_t __pyx_v_vec_size;
   long __pyx_v_i;
   PyObject *__pyx_r = NULL;
@@ -5527,20 +5527,20 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_f
   __Pyx_RefNannySetupContext("__pyx_fuse_1_0hash_vec_full", 0);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":85
- *         input_dtype x, xi
+ *         key_dtype k, xi
  * 
- *         uint32_t vec_size = xvec.shape[0]             # <<<<<<<<<<<<<<
+ *         uint32_t vec_size = kvec.shape[0]             # <<<<<<<<<<<<<<
  *         uint32_t row, shift, rebase
  *         uint32_t nrows
  */
-  __pyx_v_vec_size = (__pyx_v_xvec.shape[0]);
+  __pyx_v_vec_size = (__pyx_v_kvec.shape[0]);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":90
  * 
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:             # <<<<<<<<<<<<<<
  *         for i in range(0, vec_size):
- *             x = xvec[i]
+ *             k = kvec[i]
  */
   {
       #ifdef WITH_THREAD
@@ -5554,7 +5554,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_f
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:
  *         for i in range(0, vec_size):             # <<<<<<<<<<<<<<
- *             x = xvec[i]
+ *             k = kvec[i]
  * 
  */
         __pyx_t_1 = __pyx_v_vec_size;
@@ -5565,25 +5565,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_f
           /* "tabulationhashing/c_tabulationhashing.pyx":92
  *     with nogil:
  *         for i in range(0, vec_size):
- *             x = xvec[i]             # <<<<<<<<<<<<<<
+ *             k = kvec[i]             # <<<<<<<<<<<<<<
  * 
  *             # The C compiler should be smart enough to inline this call
  */
           __pyx_t_4 = __pyx_v_i;
-          __pyx_v_x = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_xvec.data) + __pyx_t_4)) )));
+          __pyx_v_k = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_kvec.data) + __pyx_t_4)) )));
 
           /* "tabulationhashing/c_tabulationhashing.pyx":99
  *             # Note: it should not be necessary but just to make it explicit
  *             # I'm telling Cython which specialization of c_hash_x I want to call
- *             h = c_hash_x[input_dtype, hash_dtype](x, table)             # <<<<<<<<<<<<<<
+ *             h = c_hash_x[key_dtype, hash_dtype](k, table)             # <<<<<<<<<<<<<<
  *             out[i] = h
  * 
  */
-          __pyx_v_h = __pyx_fuse_1_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_x, __pyx_v_table);
+          __pyx_v_h = __pyx_fuse_1_0__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_k, __pyx_v_table);
 
           /* "tabulationhashing/c_tabulationhashing.pyx":100
  *             # I'm telling Cython which specialization of c_hash_x I want to call
- *             h = c_hash_x[input_dtype, hash_dtype](x, table)
+ *             h = c_hash_x[key_dtype, hash_dtype](k, table)
  *             out[i] = h             # <<<<<<<<<<<<<<
  * 
  * 
@@ -5598,7 +5598,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_f
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:             # <<<<<<<<<<<<<<
  *         for i in range(0, vec_size):
- *             x = xvec[i]
+ *             k = kvec[i]
  */
       /*finally:*/ {
         /*normal exit:*/{
@@ -5615,14 +5615,14 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_f
   /* "tabulationhashing/c_tabulationhashing.pyx":70
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
+ * def hash_vec_full(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
  *     # Hash a vector of numbers and save the hashes into another.
  *     #
  */
 
   /* function exit code */
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_xvec, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_kvec, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_table, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __Pyx_XGIVEREF(__pyx_r);
@@ -5634,7 +5634,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_20hash_vec_f
 static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_23hash_vec_full(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_1_1__pyx_mdef_17tabulationhashing_19c_tabulationhashing_23hash_vec_full = {"__pyx_fuse_1_1hash_vec_full", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_23hash_vec_full, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_23hash_vec_full(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  __Pyx_memviewslice __pyx_v_xvec = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_kvec = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_out = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
@@ -5644,7 +5644,7 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_vec_full (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_xvec,&__pyx_n_s_table,&__pyx_n_s_out,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_kvec,&__pyx_n_s_table,&__pyx_n_s_out,0};
     PyObject* values[3] = {0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -5662,7 +5662,7 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xvec)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kvec)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -5687,7 +5687,7 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_xvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_xvec.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
+    __pyx_v_kvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_kvec.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
     __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 70, __pyx_L3_error)
   }
@@ -5699,16 +5699,16 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_full(__pyx_self, __pyx_v_xvec, __pyx_v_table, __pyx_v_out);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_full(__pyx_self, __pyx_v_kvec, __pyx_v_table, __pyx_v_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_full(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out) {
   uint64_t __pyx_v_h;
-  uint64_t __pyx_v_x;
+  uint64_t __pyx_v_k;
   uint32_t __pyx_v_vec_size;
   long __pyx_v_i;
   PyObject *__pyx_r = NULL;
@@ -5720,20 +5720,20 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_f
   __Pyx_RefNannySetupContext("__pyx_fuse_1_1hash_vec_full", 0);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":85
- *         input_dtype x, xi
+ *         key_dtype k, xi
  * 
- *         uint32_t vec_size = xvec.shape[0]             # <<<<<<<<<<<<<<
+ *         uint32_t vec_size = kvec.shape[0]             # <<<<<<<<<<<<<<
  *         uint32_t row, shift, rebase
  *         uint32_t nrows
  */
-  __pyx_v_vec_size = (__pyx_v_xvec.shape[0]);
+  __pyx_v_vec_size = (__pyx_v_kvec.shape[0]);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":90
  * 
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:             # <<<<<<<<<<<<<<
  *         for i in range(0, vec_size):
- *             x = xvec[i]
+ *             k = kvec[i]
  */
   {
       #ifdef WITH_THREAD
@@ -5747,7 +5747,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_f
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:
  *         for i in range(0, vec_size):             # <<<<<<<<<<<<<<
- *             x = xvec[i]
+ *             k = kvec[i]
  * 
  */
         __pyx_t_1 = __pyx_v_vec_size;
@@ -5758,25 +5758,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_f
           /* "tabulationhashing/c_tabulationhashing.pyx":92
  *     with nogil:
  *         for i in range(0, vec_size):
- *             x = xvec[i]             # <<<<<<<<<<<<<<
+ *             k = kvec[i]             # <<<<<<<<<<<<<<
  * 
  *             # The C compiler should be smart enough to inline this call
  */
           __pyx_t_4 = __pyx_v_i;
-          __pyx_v_x = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_xvec.data) + __pyx_t_4)) )));
+          __pyx_v_k = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_kvec.data) + __pyx_t_4)) )));
 
           /* "tabulationhashing/c_tabulationhashing.pyx":99
  *             # Note: it should not be necessary but just to make it explicit
  *             # I'm telling Cython which specialization of c_hash_x I want to call
- *             h = c_hash_x[input_dtype, hash_dtype](x, table)             # <<<<<<<<<<<<<<
+ *             h = c_hash_x[key_dtype, hash_dtype](k, table)             # <<<<<<<<<<<<<<
  *             out[i] = h
  * 
  */
-          __pyx_v_h = __pyx_fuse_1_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_x, __pyx_v_table);
+          __pyx_v_h = __pyx_fuse_1_1__pyx_f_17tabulationhashing_19c_tabulationhashing_c_hash_x(__pyx_v_k, __pyx_v_table);
 
           /* "tabulationhashing/c_tabulationhashing.pyx":100
  *             # I'm telling Cython which specialization of c_hash_x I want to call
- *             h = c_hash_x[input_dtype, hash_dtype](x, table)
+ *             h = c_hash_x[key_dtype, hash_dtype](k, table)
  *             out[i] = h             # <<<<<<<<<<<<<<
  * 
  * 
@@ -5791,7 +5791,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_f
  *     # Disable the GIL as this loop will not interact with the Python VM
  *     with nogil:             # <<<<<<<<<<<<<<
  *         for i in range(0, vec_size):
- *             x = xvec[i]
+ *             k = kvec[i]
  */
       /*finally:*/ {
         /*normal exit:*/{
@@ -5808,14 +5808,14 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_f
   /* "tabulationhashing/c_tabulationhashing.pyx":70
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
+ * def hash_vec_full(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
  *     # Hash a vector of numbers and save the hashes into another.
  *     #
  */
 
   /* function exit code */
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_xvec, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_kvec, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_table, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __Pyx_XGIVEREF(__pyx_r);
@@ -5826,7 +5826,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_22hash_vec_f
 /* "tabulationhashing/c_tabulationhashing.pyx":107
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
+ * def hash_vec_batch(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype hi
  */
@@ -6022,7 +6022,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_4hash_vec_ba
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
     __PYX_ERR(0, 107, __pyx_L1_error)
   }
-  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_xvec, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 107, __pyx_L1_error)
+  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_kvec, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 107, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_4 != 0);
   __pyx_t_2 = __pyx_t_3;
   __pyx_L7_bool_binop_done:;
@@ -6031,7 +6031,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_4hash_vec_ba
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(0, 107, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_xvec); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_kvec); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_arg = __pyx_t_1;
     __pyx_t_1 = 0;
@@ -6622,7 +6622,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_4hash_vec_ba
 static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_27hash_vec_batch(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_0_0__pyx_mdef_17tabulationhashing_19c_tabulationhashing_27hash_vec_batch = {"__pyx_fuse_0_0hash_vec_batch", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_27hash_vec_batch, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_27hash_vec_batch(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  __Pyx_memviewslice __pyx_v_xvec = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_kvec = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_out = { 0, 0, { 0 }, { 0 }, { 0 } };
   uint32_t __pyx_v_batch_len;
@@ -6633,7 +6633,7 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_vec_batch (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_xvec,&__pyx_n_s_table,&__pyx_n_s_out,&__pyx_n_s_batch_len,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_kvec,&__pyx_n_s_table,&__pyx_n_s_out,&__pyx_n_s_batch_len,0};
     PyObject* values[4] = {0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -6653,7 +6653,7 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xvec)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kvec)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -6685,7 +6685,7 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
-    __pyx_v_xvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_xvec.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
+    __pyx_v_kvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_kvec.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_batch_len = __Pyx_PyInt_As_uint32_t(values[3]); if (unlikely((__pyx_v_batch_len == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 107, __pyx_L3_error)
@@ -6698,16 +6698,16 @@ static PyObject *__pyx_fuse_0_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_batch(__pyx_self, __pyx_v_xvec, __pyx_v_table, __pyx_v_out, __pyx_v_batch_len);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_batch(__pyx_self, __pyx_v_kvec, __pyx_v_table, __pyx_v_out, __pyx_v_batch_len);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len) {
   uint32_t __pyx_v_hi;
-  uint32_t __pyx_v_x;
+  uint32_t __pyx_v_k;
   uint32_t __pyx_v_xi;
   uint32_t __pyx_v_batch_start;
   uint32_t __pyx_v_batch_end;
@@ -6731,21 +6731,21 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_b
   __Pyx_RefNannySetupContext("__pyx_fuse_0_0hash_vec_batch", 0);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":112
- *         input_dtype x, xi
+ *         key_dtype k, xi
  * 
- *         uint32_t batch_start = 0, batch_end = batch_len, vec_size = xvec.shape[0]             # <<<<<<<<<<<<<<
+ *         uint32_t batch_start = 0, batch_end = batch_len, vec_size = kvec.shape[0]             # <<<<<<<<<<<<<<
  *         uint32_t row, shift, rebase
  *         uint32_t nrows
  */
   __pyx_v_batch_start = 0;
   __pyx_v_batch_end = __pyx_v_batch_len;
-  __pyx_v_vec_size = (__pyx_v_xvec.shape[0]);
+  __pyx_v_vec_size = (__pyx_v_kvec.shape[0]);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":120
  *     # by the C compiler
- *     if input_dtype is uint32_t:
+ *     if key_dtype is uint32_t:
  *         nrows = 4             # <<<<<<<<<<<<<<
- *     elif input_dtype is uint64_t:
+ *     elif key_dtype is uint64_t:
  *         nrows = 8
  */
   __pyx_v_nrows = 4;
@@ -6798,7 +6798,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_b
  *                 # Process the batch with the first row (partial hash).
  *                 # This allows us to initialize the out vector
  *                 for i in range(batch_start, batch_end):             # <<<<<<<<<<<<<<
- *                     x = xvec[i]
+ *                     k = kvec[i]
  * 
  */
             __pyx_t_2 = __pyx_v_batch_end;
@@ -6809,25 +6809,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_b
               /* "tabulationhashing/c_tabulationhashing.pyx":156
  *                 # This allows us to initialize the out vector
  *                 for i in range(batch_start, batch_end):
- *                     x = xvec[i]             # <<<<<<<<<<<<<<
+ *                     k = kvec[i]             # <<<<<<<<<<<<<<
  * 
- *                     xi = (x) & 0x000000ff
+ *                     xi = (k) & 0x000000ff
  */
               __pyx_t_5 = __pyx_v_i;
-              __pyx_v_x = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_xvec.data) + __pyx_t_5)) )));
+              __pyx_v_k = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_kvec.data) + __pyx_t_5)) )));
 
               /* "tabulationhashing/c_tabulationhashing.pyx":158
- *                     x = xvec[i]
+ *                     k = kvec[i]
  * 
- *                     xi = (x) & 0x000000ff             # <<<<<<<<<<<<<<
+ *                     xi = (k) & 0x000000ff             # <<<<<<<<<<<<<<
  *                     hi = table[xi]
  * 
  */
-              __pyx_v_xi = (__pyx_v_x & 0x000000ff);
+              __pyx_v_xi = (__pyx_v_k & 0x000000ff);
 
               /* "tabulationhashing/c_tabulationhashing.pyx":159
  * 
- *                     xi = (x) & 0x000000ff
+ *                     xi = (k) & 0x000000ff
  *                     hi = table[xi]             # <<<<<<<<<<<<<<
  * 
  *                     out[i] = hi
@@ -6872,7 +6872,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_b
  *                     shift = row * 8
  *                     rebase = row * 256             # <<<<<<<<<<<<<<
  *                     for i in range(batch_start, batch_end):
- *                         x = xvec[i]
+ *                         k = kvec[i]
  */
               __pyx_v_rebase = (__pyx_v_row * 0x100);
 
@@ -6880,7 +6880,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_b
  *                     shift = row * 8
  *                     rebase = row * 256
  *                     for i in range(batch_start, batch_end):             # <<<<<<<<<<<<<<
- *                         x = xvec[i]
+ *                         k = kvec[i]
  * 
  */
               __pyx_t_6 = __pyx_v_batch_end;
@@ -6891,25 +6891,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_b
                 /* "tabulationhashing/c_tabulationhashing.pyx":175
  *                     rebase = row * 256
  *                     for i in range(batch_start, batch_end):
- *                         x = xvec[i]             # <<<<<<<<<<<<<<
+ *                         k = kvec[i]             # <<<<<<<<<<<<<<
  * 
- *                         xi = (x >> shift) & 0x000000ff
+ *                         xi = (k >> shift) & 0x000000ff
  */
                 __pyx_t_5 = __pyx_v_i;
-                __pyx_v_x = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_xvec.data) + __pyx_t_5)) )));
+                __pyx_v_k = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_kvec.data) + __pyx_t_5)) )));
 
                 /* "tabulationhashing/c_tabulationhashing.pyx":177
- *                         x = xvec[i]
+ *                         k = kvec[i]
  * 
- *                         xi = (x >> shift) & 0x000000ff             # <<<<<<<<<<<<<<
+ *                         xi = (k >> shift) & 0x000000ff             # <<<<<<<<<<<<<<
  *                         hi = table[xi + rebase]
  * 
  */
-                __pyx_v_xi = ((__pyx_v_x >> __pyx_v_shift) & 0x000000ff);
+                __pyx_v_xi = ((__pyx_v_k >> __pyx_v_shift) & 0x000000ff);
 
                 /* "tabulationhashing/c_tabulationhashing.pyx":178
  * 
- *                         xi = (x >> shift) & 0x000000ff
+ *                         xi = (k >> shift) & 0x000000ff
  *                         hi = table[xi + rebase]             # <<<<<<<<<<<<<<
  * 
  *                         out[i] ^= hi
@@ -7015,14 +7015,14 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_b
   /* "tabulationhashing/c_tabulationhashing.pyx":107
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
+ * def hash_vec_batch(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype hi
  */
 
   /* function exit code */
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_xvec, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_kvec, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_table, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __Pyx_XGIVEREF(__pyx_r);
@@ -7034,7 +7034,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_26hash_vec_b
 static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_29hash_vec_batch(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_0_1__pyx_mdef_17tabulationhashing_19c_tabulationhashing_29hash_vec_batch = {"__pyx_fuse_0_1hash_vec_batch", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_29hash_vec_batch, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_29hash_vec_batch(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  __Pyx_memviewslice __pyx_v_xvec = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_kvec = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_out = { 0, 0, { 0 }, { 0 }, { 0 } };
   uint32_t __pyx_v_batch_len;
@@ -7045,7 +7045,7 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_vec_batch (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_xvec,&__pyx_n_s_table,&__pyx_n_s_out,&__pyx_n_s_batch_len,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_kvec,&__pyx_n_s_table,&__pyx_n_s_out,&__pyx_n_s_batch_len,0};
     PyObject* values[4] = {0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -7065,7 +7065,7 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xvec)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kvec)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -7097,7 +7097,7 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
-    __pyx_v_xvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_xvec.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
+    __pyx_v_kvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_kvec.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_batch_len = __Pyx_PyInt_As_uint32_t(values[3]); if (unlikely((__pyx_v_batch_len == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 107, __pyx_L3_error)
@@ -7110,16 +7110,16 @@ static PyObject *__pyx_fuse_0_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_batch(__pyx_self, __pyx_v_xvec, __pyx_v_table, __pyx_v_out, __pyx_v_batch_len);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_batch(__pyx_self, __pyx_v_kvec, __pyx_v_table, __pyx_v_out, __pyx_v_batch_len);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len) {
   uint64_t __pyx_v_hi;
-  uint32_t __pyx_v_x;
+  uint32_t __pyx_v_k;
   uint32_t __pyx_v_xi;
   uint32_t __pyx_v_batch_start;
   uint32_t __pyx_v_batch_end;
@@ -7143,21 +7143,21 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_b
   __Pyx_RefNannySetupContext("__pyx_fuse_0_1hash_vec_batch", 0);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":112
- *         input_dtype x, xi
+ *         key_dtype k, xi
  * 
- *         uint32_t batch_start = 0, batch_end = batch_len, vec_size = xvec.shape[0]             # <<<<<<<<<<<<<<
+ *         uint32_t batch_start = 0, batch_end = batch_len, vec_size = kvec.shape[0]             # <<<<<<<<<<<<<<
  *         uint32_t row, shift, rebase
  *         uint32_t nrows
  */
   __pyx_v_batch_start = 0;
   __pyx_v_batch_end = __pyx_v_batch_len;
-  __pyx_v_vec_size = (__pyx_v_xvec.shape[0]);
+  __pyx_v_vec_size = (__pyx_v_kvec.shape[0]);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":120
  *     # by the C compiler
- *     if input_dtype is uint32_t:
+ *     if key_dtype is uint32_t:
  *         nrows = 4             # <<<<<<<<<<<<<<
- *     elif input_dtype is uint64_t:
+ *     elif key_dtype is uint64_t:
  *         nrows = 8
  */
   __pyx_v_nrows = 4;
@@ -7210,7 +7210,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_b
  *                 # Process the batch with the first row (partial hash).
  *                 # This allows us to initialize the out vector
  *                 for i in range(batch_start, batch_end):             # <<<<<<<<<<<<<<
- *                     x = xvec[i]
+ *                     k = kvec[i]
  * 
  */
             __pyx_t_2 = __pyx_v_batch_end;
@@ -7221,25 +7221,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_b
               /* "tabulationhashing/c_tabulationhashing.pyx":156
  *                 # This allows us to initialize the out vector
  *                 for i in range(batch_start, batch_end):
- *                     x = xvec[i]             # <<<<<<<<<<<<<<
+ *                     k = kvec[i]             # <<<<<<<<<<<<<<
  * 
- *                     xi = (x) & 0x000000ff
+ *                     xi = (k) & 0x000000ff
  */
               __pyx_t_5 = __pyx_v_i;
-              __pyx_v_x = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_xvec.data) + __pyx_t_5)) )));
+              __pyx_v_k = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_kvec.data) + __pyx_t_5)) )));
 
               /* "tabulationhashing/c_tabulationhashing.pyx":158
- *                     x = xvec[i]
+ *                     k = kvec[i]
  * 
- *                     xi = (x) & 0x000000ff             # <<<<<<<<<<<<<<
+ *                     xi = (k) & 0x000000ff             # <<<<<<<<<<<<<<
  *                     hi = table[xi]
  * 
  */
-              __pyx_v_xi = (__pyx_v_x & 0x000000ff);
+              __pyx_v_xi = (__pyx_v_k & 0x000000ff);
 
               /* "tabulationhashing/c_tabulationhashing.pyx":159
  * 
- *                     xi = (x) & 0x000000ff
+ *                     xi = (k) & 0x000000ff
  *                     hi = table[xi]             # <<<<<<<<<<<<<<
  * 
  *                     out[i] = hi
@@ -7284,7 +7284,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_b
  *                     shift = row * 8
  *                     rebase = row * 256             # <<<<<<<<<<<<<<
  *                     for i in range(batch_start, batch_end):
- *                         x = xvec[i]
+ *                         k = kvec[i]
  */
               __pyx_v_rebase = (__pyx_v_row * 0x100);
 
@@ -7292,7 +7292,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_b
  *                     shift = row * 8
  *                     rebase = row * 256
  *                     for i in range(batch_start, batch_end):             # <<<<<<<<<<<<<<
- *                         x = xvec[i]
+ *                         k = kvec[i]
  * 
  */
               __pyx_t_6 = __pyx_v_batch_end;
@@ -7303,25 +7303,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_b
                 /* "tabulationhashing/c_tabulationhashing.pyx":175
  *                     rebase = row * 256
  *                     for i in range(batch_start, batch_end):
- *                         x = xvec[i]             # <<<<<<<<<<<<<<
+ *                         k = kvec[i]             # <<<<<<<<<<<<<<
  * 
- *                         xi = (x >> shift) & 0x000000ff
+ *                         xi = (k >> shift) & 0x000000ff
  */
                 __pyx_t_5 = __pyx_v_i;
-                __pyx_v_x = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_xvec.data) + __pyx_t_5)) )));
+                __pyx_v_k = (*((uint32_t *) ( /* dim=0 */ ((char *) (((uint32_t *) __pyx_v_kvec.data) + __pyx_t_5)) )));
 
                 /* "tabulationhashing/c_tabulationhashing.pyx":177
- *                         x = xvec[i]
+ *                         k = kvec[i]
  * 
- *                         xi = (x >> shift) & 0x000000ff             # <<<<<<<<<<<<<<
+ *                         xi = (k >> shift) & 0x000000ff             # <<<<<<<<<<<<<<
  *                         hi = table[xi + rebase]
  * 
  */
-                __pyx_v_xi = ((__pyx_v_x >> __pyx_v_shift) & 0x000000ff);
+                __pyx_v_xi = ((__pyx_v_k >> __pyx_v_shift) & 0x000000ff);
 
                 /* "tabulationhashing/c_tabulationhashing.pyx":178
  * 
- *                         xi = (x >> shift) & 0x000000ff
+ *                         xi = (k >> shift) & 0x000000ff
  *                         hi = table[xi + rebase]             # <<<<<<<<<<<<<<
  * 
  *                         out[i] ^= hi
@@ -7427,14 +7427,14 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_b
   /* "tabulationhashing/c_tabulationhashing.pyx":107
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
+ * def hash_vec_batch(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype hi
  */
 
   /* function exit code */
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_xvec, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_kvec, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_table, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __Pyx_XGIVEREF(__pyx_r);
@@ -7446,7 +7446,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_28hash_vec_b
 static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_31hash_vec_batch(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_1_0__pyx_mdef_17tabulationhashing_19c_tabulationhashing_31hash_vec_batch = {"__pyx_fuse_1_0hash_vec_batch", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_31hash_vec_batch, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashing_31hash_vec_batch(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  __Pyx_memviewslice __pyx_v_xvec = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_kvec = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_out = { 0, 0, { 0 }, { 0 }, { 0 } };
   uint32_t __pyx_v_batch_len;
@@ -7457,7 +7457,7 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_vec_batch (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_xvec,&__pyx_n_s_table,&__pyx_n_s_out,&__pyx_n_s_batch_len,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_kvec,&__pyx_n_s_table,&__pyx_n_s_out,&__pyx_n_s_batch_len,0};
     PyObject* values[4] = {0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -7477,7 +7477,7 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xvec)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kvec)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -7509,7 +7509,7 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
-    __pyx_v_xvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_xvec.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
+    __pyx_v_kvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_kvec.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint32_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_batch_len = __Pyx_PyInt_As_uint32_t(values[3]); if (unlikely((__pyx_v_batch_len == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 107, __pyx_L3_error)
@@ -7522,16 +7522,16 @@ static PyObject *__pyx_fuse_1_0__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_batch(__pyx_self, __pyx_v_xvec, __pyx_v_table, __pyx_v_out, __pyx_v_batch_len);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_batch(__pyx_self, __pyx_v_kvec, __pyx_v_table, __pyx_v_out, __pyx_v_batch_len);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len) {
   uint32_t __pyx_v_hi;
-  uint64_t __pyx_v_x;
+  uint64_t __pyx_v_k;
   uint64_t __pyx_v_xi;
   uint32_t __pyx_v_batch_start;
   uint32_t __pyx_v_batch_end;
@@ -7556,19 +7556,19 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_b
   __Pyx_RefNannySetupContext("__pyx_fuse_1_0hash_vec_batch", 0);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":112
- *         input_dtype x, xi
+ *         key_dtype k, xi
  * 
- *         uint32_t batch_start = 0, batch_end = batch_len, vec_size = xvec.shape[0]             # <<<<<<<<<<<<<<
+ *         uint32_t batch_start = 0, batch_end = batch_len, vec_size = kvec.shape[0]             # <<<<<<<<<<<<<<
  *         uint32_t row, shift, rebase
  *         uint32_t nrows
  */
   __pyx_v_batch_start = 0;
   __pyx_v_batch_end = __pyx_v_batch_len;
-  __pyx_v_vec_size = (__pyx_v_xvec.shape[0]);
+  __pyx_v_vec_size = (__pyx_v_kvec.shape[0]);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":122
  *         nrows = 4
- *     elif input_dtype is uint64_t:
+ *     elif key_dtype is uint64_t:
  *         nrows = 8             # <<<<<<<<<<<<<<
  *     else:
  *         assert False
@@ -7623,7 +7623,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_b
  *                 # Process the batch with the first row (partial hash).
  *                 # This allows us to initialize the out vector
  *                 for i in range(batch_start, batch_end):             # <<<<<<<<<<<<<<
- *                     x = xvec[i]
+ *                     k = kvec[i]
  * 
  */
             __pyx_t_2 = __pyx_v_batch_end;
@@ -7634,25 +7634,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_b
               /* "tabulationhashing/c_tabulationhashing.pyx":156
  *                 # This allows us to initialize the out vector
  *                 for i in range(batch_start, batch_end):
- *                     x = xvec[i]             # <<<<<<<<<<<<<<
+ *                     k = kvec[i]             # <<<<<<<<<<<<<<
  * 
- *                     xi = (x) & 0x000000ff
+ *                     xi = (k) & 0x000000ff
  */
               __pyx_t_5 = __pyx_v_i;
-              __pyx_v_x = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_xvec.data) + __pyx_t_5)) )));
+              __pyx_v_k = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_kvec.data) + __pyx_t_5)) )));
 
               /* "tabulationhashing/c_tabulationhashing.pyx":158
- *                     x = xvec[i]
+ *                     k = kvec[i]
  * 
- *                     xi = (x) & 0x000000ff             # <<<<<<<<<<<<<<
+ *                     xi = (k) & 0x000000ff             # <<<<<<<<<<<<<<
  *                     hi = table[xi]
  * 
  */
-              __pyx_v_xi = (__pyx_v_x & 0x000000ff);
+              __pyx_v_xi = (__pyx_v_k & 0x000000ff);
 
               /* "tabulationhashing/c_tabulationhashing.pyx":159
  * 
- *                     xi = (x) & 0x000000ff
+ *                     xi = (k) & 0x000000ff
  *                     hi = table[xi]             # <<<<<<<<<<<<<<
  * 
  *                     out[i] = hi
@@ -7697,7 +7697,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_b
  *                     shift = row * 8
  *                     rebase = row * 256             # <<<<<<<<<<<<<<
  *                     for i in range(batch_start, batch_end):
- *                         x = xvec[i]
+ *                         k = kvec[i]
  */
               __pyx_v_rebase = (__pyx_v_row * 0x100);
 
@@ -7705,7 +7705,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_b
  *                     shift = row * 8
  *                     rebase = row * 256
  *                     for i in range(batch_start, batch_end):             # <<<<<<<<<<<<<<
- *                         x = xvec[i]
+ *                         k = kvec[i]
  * 
  */
               __pyx_t_7 = __pyx_v_batch_end;
@@ -7716,25 +7716,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_b
                 /* "tabulationhashing/c_tabulationhashing.pyx":175
  *                     rebase = row * 256
  *                     for i in range(batch_start, batch_end):
- *                         x = xvec[i]             # <<<<<<<<<<<<<<
+ *                         k = kvec[i]             # <<<<<<<<<<<<<<
  * 
- *                         xi = (x >> shift) & 0x000000ff
+ *                         xi = (k >> shift) & 0x000000ff
  */
                 __pyx_t_5 = __pyx_v_i;
-                __pyx_v_x = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_xvec.data) + __pyx_t_5)) )));
+                __pyx_v_k = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_kvec.data) + __pyx_t_5)) )));
 
                 /* "tabulationhashing/c_tabulationhashing.pyx":177
- *                         x = xvec[i]
+ *                         k = kvec[i]
  * 
- *                         xi = (x >> shift) & 0x000000ff             # <<<<<<<<<<<<<<
+ *                         xi = (k >> shift) & 0x000000ff             # <<<<<<<<<<<<<<
  *                         hi = table[xi + rebase]
  * 
  */
-                __pyx_v_xi = ((__pyx_v_x >> __pyx_v_shift) & 0x000000ff);
+                __pyx_v_xi = ((__pyx_v_k >> __pyx_v_shift) & 0x000000ff);
 
                 /* "tabulationhashing/c_tabulationhashing.pyx":178
  * 
- *                         xi = (x >> shift) & 0x000000ff
+ *                         xi = (k >> shift) & 0x000000ff
  *                         hi = table[xi + rebase]             # <<<<<<<<<<<<<<
  * 
  *                         out[i] ^= hi
@@ -7840,14 +7840,14 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_b
   /* "tabulationhashing/c_tabulationhashing.pyx":107
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
+ * def hash_vec_batch(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype hi
  */
 
   /* function exit code */
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_xvec, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_kvec, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_table, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __Pyx_XGIVEREF(__pyx_r);
@@ -7859,7 +7859,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_30hash_vec_b
 static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_33hash_vec_batch(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_fuse_1_1__pyx_mdef_17tabulationhashing_19c_tabulationhashing_33hash_vec_batch = {"__pyx_fuse_1_1hash_vec_batch", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_33hash_vec_batch, METH_VARARGS|METH_KEYWORDS, 0};
 static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashing_33hash_vec_batch(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  __Pyx_memviewslice __pyx_v_xvec = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_kvec = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_out = { 0, 0, { 0 }, { 0 }, { 0 } };
   uint32_t __pyx_v_batch_len;
@@ -7870,7 +7870,7 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hash_vec_batch (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_xvec,&__pyx_n_s_table,&__pyx_n_s_out,&__pyx_n_s_batch_len,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_kvec,&__pyx_n_s_table,&__pyx_n_s_out,&__pyx_n_s_batch_len,0};
     PyObject* values[4] = {0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -7890,7 +7890,7 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       kw_args = PyDict_Size(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xvec)) != 0)) kw_args--;
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kvec)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -7922,7 +7922,7 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
-    __pyx_v_xvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_xvec.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
+    __pyx_v_kvec = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_kvec.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_table = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_table.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn_uint64_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 107, __pyx_L3_error)
     __pyx_v_batch_len = __Pyx_PyInt_As_uint32_t(values[3]); if (unlikely((__pyx_v_batch_len == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 107, __pyx_L3_error)
@@ -7935,16 +7935,16 @@ static PyObject *__pyx_fuse_1_1__pyx_pw_17tabulationhashing_19c_tabulationhashin
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_batch(__pyx_self, __pyx_v_xvec, __pyx_v_table, __pyx_v_out, __pyx_v_batch_len);
+  __pyx_r = __pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_batch(__pyx_self, __pyx_v_kvec, __pyx_v_table, __pyx_v_out, __pyx_v_batch_len);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_xvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len) {
+static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_batch(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_kvec, __Pyx_memviewslice __pyx_v_table, __Pyx_memviewslice __pyx_v_out, uint32_t __pyx_v_batch_len) {
   uint64_t __pyx_v_hi;
-  uint64_t __pyx_v_x;
+  uint64_t __pyx_v_k;
   uint64_t __pyx_v_xi;
   uint32_t __pyx_v_batch_start;
   uint32_t __pyx_v_batch_end;
@@ -7969,19 +7969,19 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_b
   __Pyx_RefNannySetupContext("__pyx_fuse_1_1hash_vec_batch", 0);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":112
- *         input_dtype x, xi
+ *         key_dtype k, xi
  * 
- *         uint32_t batch_start = 0, batch_end = batch_len, vec_size = xvec.shape[0]             # <<<<<<<<<<<<<<
+ *         uint32_t batch_start = 0, batch_end = batch_len, vec_size = kvec.shape[0]             # <<<<<<<<<<<<<<
  *         uint32_t row, shift, rebase
  *         uint32_t nrows
  */
   __pyx_v_batch_start = 0;
   __pyx_v_batch_end = __pyx_v_batch_len;
-  __pyx_v_vec_size = (__pyx_v_xvec.shape[0]);
+  __pyx_v_vec_size = (__pyx_v_kvec.shape[0]);
 
   /* "tabulationhashing/c_tabulationhashing.pyx":122
  *         nrows = 4
- *     elif input_dtype is uint64_t:
+ *     elif key_dtype is uint64_t:
  *         nrows = 8             # <<<<<<<<<<<<<<
  *     else:
  *         assert False
@@ -8036,7 +8036,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_b
  *                 # Process the batch with the first row (partial hash).
  *                 # This allows us to initialize the out vector
  *                 for i in range(batch_start, batch_end):             # <<<<<<<<<<<<<<
- *                     x = xvec[i]
+ *                     k = kvec[i]
  * 
  */
             __pyx_t_2 = __pyx_v_batch_end;
@@ -8047,25 +8047,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_b
               /* "tabulationhashing/c_tabulationhashing.pyx":156
  *                 # This allows us to initialize the out vector
  *                 for i in range(batch_start, batch_end):
- *                     x = xvec[i]             # <<<<<<<<<<<<<<
+ *                     k = kvec[i]             # <<<<<<<<<<<<<<
  * 
- *                     xi = (x) & 0x000000ff
+ *                     xi = (k) & 0x000000ff
  */
               __pyx_t_5 = __pyx_v_i;
-              __pyx_v_x = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_xvec.data) + __pyx_t_5)) )));
+              __pyx_v_k = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_kvec.data) + __pyx_t_5)) )));
 
               /* "tabulationhashing/c_tabulationhashing.pyx":158
- *                     x = xvec[i]
+ *                     k = kvec[i]
  * 
- *                     xi = (x) & 0x000000ff             # <<<<<<<<<<<<<<
+ *                     xi = (k) & 0x000000ff             # <<<<<<<<<<<<<<
  *                     hi = table[xi]
  * 
  */
-              __pyx_v_xi = (__pyx_v_x & 0x000000ff);
+              __pyx_v_xi = (__pyx_v_k & 0x000000ff);
 
               /* "tabulationhashing/c_tabulationhashing.pyx":159
  * 
- *                     xi = (x) & 0x000000ff
+ *                     xi = (k) & 0x000000ff
  *                     hi = table[xi]             # <<<<<<<<<<<<<<
  * 
  *                     out[i] = hi
@@ -8110,7 +8110,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_b
  *                     shift = row * 8
  *                     rebase = row * 256             # <<<<<<<<<<<<<<
  *                     for i in range(batch_start, batch_end):
- *                         x = xvec[i]
+ *                         k = kvec[i]
  */
               __pyx_v_rebase = (__pyx_v_row * 0x100);
 
@@ -8118,7 +8118,7 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_b
  *                     shift = row * 8
  *                     rebase = row * 256
  *                     for i in range(batch_start, batch_end):             # <<<<<<<<<<<<<<
- *                         x = xvec[i]
+ *                         k = kvec[i]
  * 
  */
               __pyx_t_7 = __pyx_v_batch_end;
@@ -8129,25 +8129,25 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_b
                 /* "tabulationhashing/c_tabulationhashing.pyx":175
  *                     rebase = row * 256
  *                     for i in range(batch_start, batch_end):
- *                         x = xvec[i]             # <<<<<<<<<<<<<<
+ *                         k = kvec[i]             # <<<<<<<<<<<<<<
  * 
- *                         xi = (x >> shift) & 0x000000ff
+ *                         xi = (k >> shift) & 0x000000ff
  */
                 __pyx_t_5 = __pyx_v_i;
-                __pyx_v_x = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_xvec.data) + __pyx_t_5)) )));
+                __pyx_v_k = (*((uint64_t *) ( /* dim=0 */ ((char *) (((uint64_t *) __pyx_v_kvec.data) + __pyx_t_5)) )));
 
                 /* "tabulationhashing/c_tabulationhashing.pyx":177
- *                         x = xvec[i]
+ *                         k = kvec[i]
  * 
- *                         xi = (x >> shift) & 0x000000ff             # <<<<<<<<<<<<<<
+ *                         xi = (k >> shift) & 0x000000ff             # <<<<<<<<<<<<<<
  *                         hi = table[xi + rebase]
  * 
  */
-                __pyx_v_xi = ((__pyx_v_x >> __pyx_v_shift) & 0x000000ff);
+                __pyx_v_xi = ((__pyx_v_k >> __pyx_v_shift) & 0x000000ff);
 
                 /* "tabulationhashing/c_tabulationhashing.pyx":178
  * 
- *                         xi = (x >> shift) & 0x000000ff
+ *                         xi = (k >> shift) & 0x000000ff
  *                         hi = table[xi + rebase]             # <<<<<<<<<<<<<<
  * 
  *                         out[i] ^= hi
@@ -8253,14 +8253,14 @@ static PyObject *__pyx_pf_17tabulationhashing_19c_tabulationhashing_32hash_vec_b
   /* "tabulationhashing/c_tabulationhashing.pyx":107
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
+ * def hash_vec_batch(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype hi
  */
 
   /* function exit code */
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_xvec, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_kvec, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_table, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __Pyx_XGIVEREF(__pyx_r);
@@ -22145,7 +22145,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_itemsize, __pyx_k_itemsize, sizeof(__pyx_k_itemsize), 0, 0, 1, 1},
   {&__pyx_kp_s_itemsize_0_for_cython_array, __pyx_k_itemsize_0_for_cython_array, sizeof(__pyx_k_itemsize_0_for_cython_array), 0, 0, 1, 0},
+  {&__pyx_n_s_k, __pyx_k_k, sizeof(__pyx_k_k), 0, 0, 1, 1},
   {&__pyx_n_s_kind, __pyx_k_kind, sizeof(__pyx_k_kind), 0, 0, 1, 1},
+  {&__pyx_n_s_kvec, __pyx_k_kvec, sizeof(__pyx_k_kvec), 0, 0, 1, 1},
   {&__pyx_n_s_kwargs, __pyx_k_kwargs, sizeof(__pyx_k_kwargs), 0, 0, 1, 1},
   {&__pyx_n_s_last_batch_end, __pyx_k_last_batch_end, sizeof(__pyx_k_last_batch_end), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
@@ -22208,9 +22210,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_unpack, __pyx_k_unpack, sizeof(__pyx_k_unpack), 0, 0, 1, 1},
   {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
   {&__pyx_n_s_vec_size, __pyx_k_vec_size, sizeof(__pyx_k_vec_size), 0, 0, 1, 1},
-  {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
   {&__pyx_n_s_xi, __pyx_k_xi, sizeof(__pyx_k_xi), 0, 0, 1, 1},
-  {&__pyx_n_s_xvec, __pyx_k_xvec, sizeof(__pyx_k_xvec), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
@@ -22234,8 +22234,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "tabulationhashing/c_tabulationhashing.pyx":62
  * 
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
- *     return c_hash_x(x, table)
+ * def hash_x(key_dtype k, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
+ *     return c_hash_x(k, table)
  * 
  */
   __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_No_matching_signature_found); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 62, __pyx_L1_error)
@@ -22443,11 +22443,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "tabulationhashing/c_tabulationhashing.pyx":62
  * 
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
- *     return c_hash_x(x, table)
+ * def hash_x(key_dtype k, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
+ *     return c_hash_x(k, table)
  * 
  */
-  __pyx_tuple__24 = PyTuple_Pack(2, __pyx_n_s_x, __pyx_n_s_table); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_tuple__24 = PyTuple_Pack(2, __pyx_n_s_k, __pyx_n_s_table); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
   __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_tabulationhashing_c_tabulationha, __pyx_n_s_hash_x, 62, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 62, __pyx_L1_error)
@@ -22455,11 +22455,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "tabulationhashing/c_tabulationhashing.pyx":70
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
+ * def hash_vec_full(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
  *     # Hash a vector of numbers and save the hashes into another.
  *     #
  */
-  __pyx_tuple__26 = PyTuple_Pack(13, __pyx_n_s_xvec, __pyx_n_s_table, __pyx_n_s_out, __pyx_n_s_hi, __pyx_n_s_h, __pyx_n_s_x, __pyx_n_s_xi, __pyx_n_s_vec_size, __pyx_n_s_row, __pyx_n_s_shift, __pyx_n_s_rebase, __pyx_n_s_nrows, __pyx_n_s_i); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_tuple__26 = PyTuple_Pack(13, __pyx_n_s_kvec, __pyx_n_s_table, __pyx_n_s_out, __pyx_n_s_hi, __pyx_n_s_h, __pyx_n_s_k, __pyx_n_s_xi, __pyx_n_s_vec_size, __pyx_n_s_row, __pyx_n_s_shift, __pyx_n_s_rebase, __pyx_n_s_nrows, __pyx_n_s_i); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
   __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(3, 0, 13, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_tabulationhashing_c_tabulationha, __pyx_n_s_hash_vec_full, 70, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 70, __pyx_L1_error)
@@ -22467,11 +22467,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "tabulationhashing/c_tabulationhashing.pyx":107
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
+ * def hash_vec_batch(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype hi
  */
-  __pyx_tuple__28 = PyTuple_Pack(16, __pyx_n_s_xvec, __pyx_n_s_table, __pyx_n_s_out, __pyx_n_s_batch_len, __pyx_n_s_hi, __pyx_n_s_x, __pyx_n_s_xi, __pyx_n_s_batch_start, __pyx_n_s_batch_end, __pyx_n_s_vec_size, __pyx_n_s_row, __pyx_n_s_shift, __pyx_n_s_rebase, __pyx_n_s_nrows, __pyx_n_s_last_batch_end, __pyx_n_s_i); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 107, __pyx_L1_error)
+  __pyx_tuple__28 = PyTuple_Pack(16, __pyx_n_s_kvec, __pyx_n_s_table, __pyx_n_s_out, __pyx_n_s_batch_len, __pyx_n_s_hi, __pyx_n_s_k, __pyx_n_s_xi, __pyx_n_s_batch_start, __pyx_n_s_batch_end, __pyx_n_s_vec_size, __pyx_n_s_row, __pyx_n_s_shift, __pyx_n_s_rebase, __pyx_n_s_nrows, __pyx_n_s_last_batch_end, __pyx_n_s_i); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
   __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(4, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_tabulationhashing_c_tabulationha, __pyx_n_s_hash_vec_batch, 107, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 107, __pyx_L1_error)
@@ -22894,8 +22894,8 @@ if (!__Pyx_RefNanny) {
   /* "tabulationhashing/c_tabulationhashing.pyx":62
  * 
  * # Make c_hash_x callable from Python
- * def hash_x(input_dtype x, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
- *     return c_hash_x(x, table)
+ * def hash_x(key_dtype k, hash_dtype[::1] table):             # <<<<<<<<<<<<<<
+ *     return c_hash_x(k, table)
  * 
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
@@ -22932,7 +22932,7 @@ if (!__Pyx_RefNanny) {
   /* "tabulationhashing/c_tabulationhashing.pyx":70
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
+ * def hash_vec_full(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out):             # <<<<<<<<<<<<<<
  *     # Hash a vector of numbers and save the hashes into another.
  *     #
  */
@@ -22970,7 +22970,7 @@ if (!__Pyx_RefNanny) {
   /* "tabulationhashing/c_tabulationhashing.pyx":107
  * @cython.infer_types(True)
  * @cython.cdivision(True)
- * def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
+ * def hash_vec_batch(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):             # <<<<<<<<<<<<<<
  *     cdef:
  *         hash_dtype hi
  */

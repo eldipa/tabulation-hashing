@@ -14,60 +14,60 @@ ctypedef fused hash_dtype:
     uint32_t
     uint64_t
 
-ctypedef fused input_dtype:
+ctypedef fused key_dtype:
     uint32_t
     uint64_t
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.infer_types(True)
-cdef inline hash_dtype c_hash_x(input_dtype x, hash_dtype[::1] table) nogil:
+cdef inline hash_dtype c_hash_x(key_dtype k, hash_dtype[::1] table) nogil:
     cdef:
         hash_dtype h = 0, h0, h1, h2, h3, h4, h5, h6, h7
-        input_dtype x0, x1, x2, x3, x4, x5, x6, x7
+        key_dtype k0, k1, k2, k3, k4, k5, k6, k7
 
-    x0 = x & 0x000000ff
-    x1 = (x >> 8) & 0x000000ff
-    x2 = (x >> 16) & 0x000000ff
-    x3 = (x >> 24) & 0x000000ff
+    k0 = k & 0x000000ff
+    k1 = (k >> 8) & 0x000000ff
+    k2 = (k >> 16) & 0x000000ff
+    k3 = (k >> 24) & 0x000000ff
 
     # Note: table is assumed to be C-contiguous array of
-    # 256 x (4 or 8) hash_dtype numbers. This is declared in the
+    # 256 k (4 or 8) hash_dtype numbers. This is declared in the
     # function signature as 'hash_dtype[::1]'
     # With this, we can avoid the multiplication required
     # manage non-one strides (aka non-contiguous arrays)
-    h0 = table[x0]
-    h1 = table[x1 + 256]
-    h2 = table[x2 + 256 * 2]
-    h3 = table[x3 + 256 * 3]
+    h0 = table[k0]
+    h1 = table[k1 + 256]
+    h2 = table[k2 + 256 * 2]
+    h3 = table[k3 + 256 * 3]
 
     h = h0 ^ h1 ^ h2 ^ h3
 
-    if input_dtype is uint64_t:
-        x4 = (x >> 32) & 0x000000ff
-        x5 = (x >> 40) & 0x000000ff
-        x6 = (x >> 48) & 0x000000ff
-        x7 = (x >> 56) & 0x000000ff
+    if key_dtype is uint64_t:
+        k4 = (k >> 32) & 0x000000ff
+        k5 = (k >> 40) & 0x000000ff
+        k6 = (k >> 48) & 0x000000ff
+        k7 = (k >> 56) & 0x000000ff
 
-        h4 = table[x4 + 256 * 4]
-        h5 = table[x5 + 256 * 5]
-        h6 = table[x6 + 256 * 6]
-        h7 = table[x7 + 256 * 7]
+        h4 = table[k4 + 256 * 4]
+        h5 = table[k5 + 256 * 5]
+        h6 = table[k6 + 256 * 6]
+        h7 = table[k7 + 256 * 7]
 
         h ^= h4 ^ h5 ^ h6 ^ h7
 
     return h
 
 # Make c_hash_x callable from Python
-def hash_x(input_dtype x, hash_dtype[::1] table):
-    return c_hash_x(x, table)
+def hash_x(key_dtype k, hash_dtype[::1] table):
+    return c_hash_x(k, table)
 
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.infer_types(True)
 @cython.cdivision(True)
-def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out):
+def hash_vec_full(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out):
     # Hash a vector of numbers and save the hashes into another.
     #
     # Call this if you know that the full table fits in the cache
@@ -80,23 +80,23 @@ def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] 
     # the way and repeatedly. Use hash_vec_batch in that case.
     cdef:
         hash_dtype hi, h
-        input_dtype x, xi
+        key_dtype k, xi
 
-        uint32_t vec_size = xvec.shape[0]
+        uint32_t vec_size = kvec.shape[0]
         uint32_t row, shift, rebase
         uint32_t nrows
 
     # Disable the GIL as this loop will not interact with the Python VM
     with nogil:
         for i in range(0, vec_size):
-            x = xvec[i]
+            k = kvec[i]
 
             # The C compiler should be smart enough to inline this call
             # (in the Cython definition I marked it as 'inline')
             #
             # Note: it should not be necessary but just to make it explicit
             # I'm telling Cython which specialization of c_hash_x I want to call
-            h = c_hash_x[input_dtype, hash_dtype](x, table)
+            h = c_hash_x[key_dtype, hash_dtype](k, table)
             out[i] = h
 
 
@@ -104,21 +104,21 @@ def hash_vec_full(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] 
 @cython.wraparound(False)
 @cython.infer_types(True)
 @cython.cdivision(True)
-def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):
+def hash_vec_batch(key_dtype[::1] kvec, hash_dtype[::1] table, hash_dtype[::1] out, uint32_t batch_len):
     cdef:
         hash_dtype hi
-        input_dtype x, xi
+        key_dtype k, xi
 
-        uint32_t batch_start = 0, batch_end = batch_len, vec_size = xvec.shape[0]
+        uint32_t batch_start = 0, batch_end = batch_len, vec_size = kvec.shape[0]
         uint32_t row, shift, rebase
         uint32_t nrows
 
     # This 'if' will disappear after the compilation by Cython
     # and the number of rows should be propagated (no variable at all)
     # by the C compiler
-    if input_dtype is uint32_t:
+    if key_dtype is uint32_t:
         nrows = 4
-    elif input_dtype is uint64_t:
+    elif key_dtype is uint64_t:
         nrows = 8
     else:
         assert False
@@ -153,9 +153,9 @@ def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1]
                 # Process the batch with the first row (partial hash).
                 # This allows us to initialize the out vector
                 for i in range(batch_start, batch_end):
-                    x = xvec[i]
+                    k = kvec[i]
 
-                    xi = (x) & 0x000000ff
+                    xi = (k) & 0x000000ff
                     hi = table[xi]
 
                     out[i] = hi
@@ -172,9 +172,9 @@ def hash_vec_batch(input_dtype[::1] xvec, hash_dtype[::1] table, hash_dtype[::1]
                     shift = row * 8
                     rebase = row * 256
                     for i in range(batch_start, batch_end):
-                        x = xvec[i]
+                        k = kvec[i]
 
-                        xi = (x >> shift) & 0x000000ff
+                        xi = (k >> shift) & 0x000000ff
                         hi = table[xi + rebase]
 
                         out[i] ^= hi
